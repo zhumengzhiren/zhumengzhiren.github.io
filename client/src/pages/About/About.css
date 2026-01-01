@@ -1,0 +1,214 @@
+.wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.1s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.home-content {
+    padding: 20vh 4vw !important;
+    color: whitesmoke;
+    text-align: left;
+}
+
+
+.home-primary-header {
+    position: relative;
+    padding-top: 80px !important;
+    color: white;
+    font-weight: 900;
+    font-size: 50pt;
+}
+
+.heading-name {
+    font-size: 2.5em !important;
+    margin-left: 8pt;
+}
+
+.typewriter-wrapper-home {
+    font-family: "Courier Prime", serif;
+    font-size: 2.3em !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding-top: 16pt;
+    margin-left: 8pt;
+}
+
+.typewriter-wrapper-home .Typewriter__cursor {
+    font-size: 1em !important;
+    color: white !important;
+}
+
+.home-content .primary-color {
+    color: white !important;
+}
+
+.my-avtar {
+    text-align: center;
+    justify-content: center !important;
+}
+
+@media (max-width: 1200px) {
+    .home-primary-header {
+        padding-right: 8vw;
+        font-size: 40pt;
+    }
+
+    .heading-name {
+        font-size: 2em !important;
+        padding-right: 8vw;
+        margin-left: 4pt;
+    }
+
+    .typewriter-wrapper-home {
+        font-size: 2em !important;
+        font-weight: 500 !important;
+        padding-right: 8vw;
+        padding-top: 8pt;
+        margin-left: 4pt;
+    }
+
+    .my-avtar {
+        padding-top: 2em !important;
+        padding-bottom: 2em !important;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .home-content {
+        padding: 15vh 4vw !important;
+    }
+
+    .home-primary-header {
+        padding-right: 8vw;
+        font-size: 30pt;
+    }
+
+    .heading-name {
+        font-size: 1.5em !important;
+        padding-right: 8vw;
+        margin-left: 4pt;
+    }
+
+    .typewriter-wrapper-home {
+        font-size: 1.5em !important;
+        font-weight: 500 !important;
+        padding-right: 8vw;
+        padding-top: 8pt;
+        margin-left: 4pt;
+    }
+}
+
+
+.home-contact-info {
+    padding-top: 20px;
+    font-size: 1.2em !important;
+    text-align: center !important;
+}
+
+.social_icon_list {
+    justify-content: center !important;
+    text-align: center !important;
+    padding-top: 25px;
+    color: white !important;
+    display: flex;
+}
+
+.social-icons {
+    padding-right: 30px;
+}
+
+.home-social-icons {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    line-height: 2em;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.home-social-icons:hover {
+    color: var(--primary-color);
+}
+
+.home-social-icons::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: scale(0.9);
+    z-index: -1;
+}
+
+.home-social-icons:hover::before {
+    transform: scale(1.15);
+    animation: neonBluePurpleGradient 3s infinite;
+}
+
+.section-divider {
+    padding-top: 25vh;
+}
+
+.section-header {
+    color: white !important;
+    font-size: 2.6em;
+    padding-bottom: 20px !important;
+    text-align: center;
+}
+
+.paragraph {
+    padding-top: 30px;
+    font-size: 1.2em !important;
+    text-align: left;
+}
+
+.sub-title {
+    max-width: max(500px, 60%);
+    font-size: 1.1em !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottom-space {
+    padding-top: 10vh;
+}
+
+
