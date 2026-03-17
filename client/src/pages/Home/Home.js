@@ -115,7 +115,7 @@ const Home = () => {
                 // scale: 1.5,
                 scale: 0.5,
                 type: "inline",
-                url: "/smalldeer.svg"
+                url: process.env.PUBLIC_URL + "/smalldeer.svg"
             },
             background: {
                 color: "#000000",

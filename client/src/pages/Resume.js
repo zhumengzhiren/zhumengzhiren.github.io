@@ -27,7 +27,7 @@ function Resume() {
                 <Row style={{ justifyContent: "center", position: "relative" }}>
                     <Button
                         variant="primary"
-                        href="/resume_cn.pdf"
+                        href={process.env.PUBLIC_URL + "/resume_cn.pdf"}
                         target="_blank"
                         style={{ maxWidth: "250px" }}
                     >
@@ -36,7 +36,7 @@ function Resume() {
                     </Button>
                     <Button
                         variant="primary"
-                        href="/resume_en.pdf"
+                        href={process.env.PUBLIC_URL + "/resume_en.pdf"}
                         target="_blank"
                         style={{ maxWidth: "250px", marginLeft: "20px" }}
                     >
@@ -47,7 +47,7 @@ function Resume() {
 
                 <Row className="resume">
                     <Document
-                        file="/resume_en.pdf"
+                        file={process.env.PUBLIC_URL + "/resume_en.pdf"}
                         className="d-flex justify-content-center"
                         onLoadError={(error) => console.error('Error while loading the document!', error)}
                     >

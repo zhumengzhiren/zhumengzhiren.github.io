@@ -17,7 +17,7 @@ function Experience() {
                         {/* Jacobs Technion-Cornell Institute */}
                         <a href="https://tech.cornell.edu/jacobs-technion-cornell-institute/" target="_blank" rel="noreferrer" className="timeline-item fade-in">
                             <div className="timeline-logo">
-                                <img src="/ct.png" alt="Cornell Tech" />
+                                <img src={process.env.PUBLIC_URL + "/ct.png"} alt="Cornell Tech" />
                             </div>
                             <div className="timeline-content">
                                 <div className="timeline-header">
@@ -43,7 +43,7 @@ function Experience() {
                         {/* Tencent */}
                         <div className="timeline-item fade-in">
                             <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer" className="timeline-logo">
-                                <img src="/tencent.png" alt="Tencent" />
+                                <img src={process.env.PUBLIC_URL + "/tencent.png"} alt="Tencent" />
                             </a>
                             <div className="timeline-content">
                                 <div className="timeline-header">
@@ -66,7 +66,7 @@ function Experience() {
                         {/* Far Data Lab */}
                         <a href="https://fardatalab.org/" target="_blank" rel="noreferrer" className="timeline-item fade-in">
                             <div className="timeline-logo">
-                                <img src="/ut.png" alt="University of Toronto" />
+                                <img src={process.env.PUBLIC_URL + "/ut.png"} alt="University of Toronto" />
                             </div>
                             <div className="timeline-content">
                                 <div className="timeline-header">
@@ -98,7 +98,7 @@ function Experience() {
                         {/* Cornell Tech, Cornell University */}
                         <a href="https://tech.cornell.edu/" target="_blank" rel="noreferrer" className="timeline-item fade-in">
                             <div className="timeline-logo">
-                                <img src="/ct.png" alt="Cornell University" />
+                                <img src={process.env.PUBLIC_URL + "/ct.png"} alt="Cornell University" />
                             </div>
                             <div className="timeline-content">
                                 <div className="timeline-header">
@@ -112,7 +112,7 @@ function Experience() {
                         {/* University of Toronto */}
                         <a href="https://www.utoronto.ca/" target="_blank" rel="noreferrer" className="timeline-item fade-in">
                             <div className="timeline-logo">
-                                <img src="/ut.png" alt="University of Toronto" />
+                                <img src={process.env.PUBLIC_URL + "/ut.png"} alt="University of Toronto" />
                             </div>
                             <div className="timeline-content">
                                 <div className="timeline-header">
