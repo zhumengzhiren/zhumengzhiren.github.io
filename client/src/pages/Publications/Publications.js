@@ -2,54 +2,106 @@ import React from "react";
 import {Container} from "react-bootstrap";
 import './Publications.css';
 import Particle from "../../Particle";
-import {AiOutlineLink} from "react-icons/ai";
 
 function Publications() {
     const publications = [
         {
-            title: "dpBento: Benchmarking DPUs for Data Processing",
-            authors: "Jiasheng Hu, Chihan Cui, Anna Li, Raahil Vora, Yuanfan Chen, Philip A. Bernstein, Jialin Li, Qizhen Zhang",
-            venue: "arXiv:2504.05536, April 2025",
-            link: "https://arxiv.org/abs/2504.05536",
-            abstract: "Data processing units (DPUs, SoC-based SmartNICs) are emerging data center hardware that provide opportunities to address cloud data processing challenges. We present dpBento, a benchmark suite that aims to uncover the performance characteristics of different DPU resources and the performance implications of offloading a wide range of data processing operations and systems to DPUs."
+            title: "Making Sense of DPU Performance for Cloud Data Processing: [Experiment, Analysis & Benchmark]",
+            authors: [
+                "Jiasheng Hu", "Chihan Cui",
+                {name: "Yuanfan Chen", self: true},
+                "Philip A. Bernstein", "Jialin Li", "Qizhen Zhang"
+            ],
+            venue: "arXiv preprint",
+            year: "2025",
+            arxiv: "https://arxiv.org/abs/2504.05536",
+            abstract: "Data processing units (DPUs, SoC-based SmartNICs) are emerging data center hardware that provide opportunities to address cloud data processing challenges. We developed a DPU benchmarking framework that encompasses a suite of data processing tasks from primitive compute, memory, and I/O operations and hardware-accelerated tasks to macro-level cloud database modules and a full-fledged, lightweight DBMS."
         },
-        // Add more publications here
     ];
+
+    const service = [
+        {
+            role: "Invited Reviewer",
+            venue: "IEEE Journal on Selected Areas in Information Theory (JSAIT)",
+            detail: "Special Issue on Energy and Data Efficiency in AI",
+            year: "2026",
+        },
+    ];
+
+    const renderAuthors = (authors) => {
+        return authors.map((author, i) => {
+            const isLast = i === authors.length - 1;
+            const separator = isLast ? "" : ", ";
+            if (typeof author === "object" && author.self) {
+                return (
+                    <span key={i}>
+                        <span className="pub-author-self">{author.name}</span>
+                        {separator}
+                    </span>
+                );
+            }
+            return <span key={i}>{author}{separator}</span>;
+        });
+    };
 
     return (
         <section>
-            <Container fluid className="publications-section">
+            <Container fluid className="pub-page">
                 <Particle />
                 <Container>
-                    <h1 className="section-header fade-in">
-                        <span className="highlight-color">PUBLICATIONS</span>
+                    <h1 className="pub-section-header fade-in">
+                        <span>PUBLICATIONS</span>
                     </h1>
 
-                    <p className="section-subtitle fade-in">
-                        Research papers and academic contributions
-                    </p>
-
-                    <div className="publications-list">
+                    <ol className="pub-list">
                         {publications.map((pub, index) => (
-                            <div key={index} className="publication-card fade-in">
-                                <h3 className="publication-title">
-                                    {pub.link !== "#" ? (
-                                        <a href={pub.link} target="_blank" rel="noreferrer">
-                                            {pub.title} <AiOutlineLink className="link-icon"/>
+                            <li key={index} className="pub-entry fade-in">
+                                <div className="pub-title">{pub.title}</div>
+                                <div className="pub-authors">
+                                    {renderAuthors(pub.authors)}
+                                </div>
+                                <div className="pub-venue">
+                                    <span className="pub-venue-name">{pub.venue}</span>, {pub.year}
+                                </div>
+                                <div className="pub-links">
+                                    {pub.arxiv && (
+                                        <a href={pub.arxiv} target="_blank" rel="noreferrer" className="pub-link-btn">
+                                            arXiv
                                         </a>
-                                    ) : (
-                                        pub.title
                                     )}
-                                </h3>
-                                <p className="publication-authors">{pub.authors}</p>
-                                <p className="publication-venue">{pub.venue}</p>
-                                <p className="publication-abstract">{pub.abstract}</p>
+                                    {pub.pdf && (
+                                        <a href={pub.pdf} target="_blank" rel="noreferrer" className="pub-link-btn">
+                                            PDF
+                                        </a>
+                                    )}
+                                    {pub.code && (
+                                        <a href={pub.code} target="_blank" rel="noreferrer" className="pub-link-btn">
+                                            Code
+                                        </a>
+                                    )}
+                                </div>
+                                {pub.abstract && (
+                                    <details className="pub-abstract-toggle">
+                                        <summary>Abstract</summary>
+                                        <p className="pub-abstract">{pub.abstract}</p>
+                                    </details>
+                                )}
+                            </li>
+                        ))}
+                    </ol>
+
+                    <h1 className="pub-section-header fade-in" style={{marginTop: "60px"}}>
+                        <span>ACADEMIC SERVICE</span>
+                    </h1>
+
+                    <div className="service-list">
+                        {service.map((s, i) => (
+                            <div key={i} className="service-entry fade-in">
+                                <span className="service-role">{s.role}</span>
+                                <span className="service-venue">{s.venue}</span>
+                                <span className="service-detail">{s.detail}, {s.year}</span>
                             </div>
                         ))}
-
-                        <div className="coming-soon fade-in">
-                            <p>More publications coming soon...</p>
-                        </div>
                     </div>
                 </Container>
             </Container>
@@ -58,4 +110,3 @@ function Publications() {
 }
 
 export default Publications;
-

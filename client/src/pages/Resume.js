@@ -9,6 +9,8 @@ import Particle from "../Particle";
 // Load worker from an external CDN
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
+const resumeFile = "/resume_en.pdf";
+
 function Resume() {
     const [width, setWidth] = useState(1200);
 
@@ -24,30 +26,21 @@ function Resume() {
         <div>
             <Container fluid className="resume-section">
                 <Particle />
-                <Row style={{ justifyContent: "center", position: "relative" }}>
+                <Row style={{ justifyContent: "center", position: "relative", marginBottom: "20px" }}>
                     <Button
                         variant="primary"
-                        href={process.env.PUBLIC_URL + "/resume_cn.pdf"}
+                        href={process.env.PUBLIC_URL + resumeFile}
                         target="_blank"
                         style={{ maxWidth: "250px" }}
                     >
                         <AiOutlineDownload />
-                        &nbsp;Download Chinese CV
-                    </Button>
-                    <Button
-                        variant="primary"
-                        href={process.env.PUBLIC_URL + "/resume_en.pdf"}
-                        target="_blank"
-                        style={{ maxWidth: "250px", marginLeft: "20px" }}
-                    >
-                        <AiOutlineDownload />
-                        &nbsp;Download English CV
+                        &nbsp;Download CV
                     </Button>
                 </Row>
 
                 <Row className="resume">
                     <Document
-                        file={process.env.PUBLIC_URL + "/resume_en.pdf"}
+                        file={process.env.PUBLIC_URL + resumeFile}
                         className="d-flex justify-content-center"
                         onLoadError={(error) => console.error('Error while loading the document!', error)}
                     >

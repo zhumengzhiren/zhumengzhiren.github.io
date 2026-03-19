@@ -32,3 +32,6 @@ npm-debug.log*
 # NextJS app (if not needed)
 nextjs-app/
 
+overleaf_resume/
+client/public/LLMSlasher_Writing.pdf
+client/public/tail.pdf
