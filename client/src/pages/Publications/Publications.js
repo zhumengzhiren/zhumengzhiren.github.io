@@ -100,7 +100,7 @@ function Publications() {
                                     )}
                                     {pub.website && (
                                         <a href={pub.website} target="_blank" rel="noreferrer" className="pub-link-btn">
-                                            Project Page
+                                            Website
                                         </a>
                                     )}
                                 </div>
