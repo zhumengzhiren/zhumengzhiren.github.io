@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import {
     AiOutlineHome,
-    AiOutlineExperiment,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import { GiStarCycle, GiDeerHead } from "react-icons/gi";
@@ -52,7 +51,7 @@ function NavBar() {
                     <span></span>
                 </Navbar.Toggle>
 
-                {/*<Navbar.Collapse id="responsive-navbar-nav">*/}
+                <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav
                         className="ms-auto" defaultActiveKey="#home"
                     >
@@ -106,7 +105,7 @@ function NavBar() {
                         </Nav.Item>
 
                     </Nav>
-                {/*</Navbar.Collapse>*/}
+                </Navbar.Collapse>
             </Container>
         </Navbar>
     );

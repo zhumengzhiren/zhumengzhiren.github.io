@@ -195,14 +195,29 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .experience-section {
+        padding: 115px 12px 50px !important;
+    }
+
     .timeline {
-        padding-left: 24px;
+        padding-left: 17px;
+    }
+
+    .timeline::before { left: 4px; }
+
+    .timeline-item {
+        padding-left: 15px;
+        margin-bottom: 24px;
+    }
+
+    .timeline-item::before {
+        left: -17px;
     }
 
     .timeline-card {
         flex-direction: column;
         gap: 12px;
-        padding: 18px 20px;
+        padding: 16px;
     }
 
     .timeline-top-row {
@@ -212,5 +227,10 @@
 
     .section-header {
         font-size: 1.2em;
+        margin-bottom: 28px;
     }
+
+    .timeline-logo { width: 42px; height: 42px; }
+    .timeline-logo img { width: 34px; height: 34px; }
+    .timeline-description { font-size: 0.9em; line-height: 1.58; }
 }

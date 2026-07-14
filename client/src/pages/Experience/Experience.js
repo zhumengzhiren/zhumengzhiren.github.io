@@ -2,10 +2,16 @@ import React from "react";
 import {Container} from "react-bootstrap";
 import './Experience.css';
 import Particle from "../../Particle";
+import Seo from "../../Seo";
 
 function Experience() {
     return (
         <section>
+            <Seo
+                title="Experience | Yuanfan Chen"
+                description="Research, engineering, and education experience of Yuanfan Chen across Cornell Tech, Tencent, and the University of Toronto."
+                path="/experience"
+            />
             <Container fluid className="experience-section">
                 <Particle />
                 <Container>

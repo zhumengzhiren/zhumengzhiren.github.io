@@ -6,6 +6,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import Particle from "../Particle";
+import Seo from "../Seo";
 // Load worker from an external CDN
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -18,12 +19,18 @@ function Resume() {
         function handleResize() {
             setWidth(window.innerWidth);
         }
+        handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
         <div>
+            <Seo
+                title="Resume | Yuanfan Chen"
+                description="Resume of Yuanfan Chen, an ML systems researcher with experience in LLM serving, distributed systems, databases, and DPU research."
+                path="/resume"
+            />
             <Container fluid className="resume-section">
                 <Particle />
                 <Row style={{ justifyContent: "center", position: "relative", marginBottom: "20px" }}>
@@ -44,7 +51,7 @@ function Resume() {
                         className="d-flex justify-content-center"
                         onLoadError={(error) => console.error('Error while loading the document!', error)}
                     >
-                        <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} renderTextLayer={false}/>
+                        <Page pageNumber={1} scale={width > 786 ? 1.7 : Math.max(0.46, width / 720)} renderTextLayer={false}/>
                     </Document>
                 </Row>
             </Container>

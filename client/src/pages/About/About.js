@@ -4,10 +4,16 @@ import {AiFillGithub, AiOutlineMail} from "react-icons/ai";
 import {FaLinkedinIn} from "react-icons/fa";
 import {FaGoogleScholar} from "react-icons/fa6";
 import './About.css';
+import Seo from "../../Seo";
 
 function About() {
     return (
         <section>
+            <Seo
+                title="About | Yuanfan Chen"
+                description="About Yuanfan Chen, an ML systems researcher and Cornell University computer science graduate working on inference and distributed systems."
+                path="/about"
+            />
             <Container className="about-page">
                 {/* Hero */}
                 <div className="about-hero fade-in">

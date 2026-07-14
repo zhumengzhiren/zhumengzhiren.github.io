@@ -145,7 +145,7 @@
 /* Responsive */
 @media (max-width: 768px) {
     .about-page {
-        padding: 130px 5vw 60px !important;
+        padding: 120px 20px 45px !important;
     }
 
     .about-name {
@@ -153,11 +153,19 @@
     }
 
     .about-links {
-        gap: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
 
     .about-link-item {
-        font-size: 0.85em;
-        padding: 5px 10px;
+        justify-content: center;
+        min-height: 42px;
+        font-size: 0.88em;
+        padding: 7px 10px;
     }
+
+    .about-hero { margin-bottom: 40px; padding-bottom: 30px; }
+    .about-section { margin-bottom: 38px; }
+    .about-bio p { line-height: 1.68; }
 }

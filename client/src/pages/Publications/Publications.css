@@ -182,11 +182,22 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .pub-page {
+        padding: 115px 14px 50px !important;
+    }
+
     .pub-section-header {
         font-size: 1.2em;
+        margin-bottom: 25px;
     }
 
     .pub-entry {
-        padding-left: 32px;
+        padding: 20px 0 22px 28px;
     }
+
+    .pub-entry::before { top: 22px; }
+    .pub-title { font-size: 1em; }
+    .pub-authors { font-size: 0.88em; }
+    .pub-links { flex-wrap: wrap; }
+    .pub-link-btn { min-height: 34px; display: inline-flex; align-items: center; }
 }

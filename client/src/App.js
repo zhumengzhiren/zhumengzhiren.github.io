@@ -1,6 +1,6 @@
 // client/src/App.js
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Exercise from './pages/Exercise';
 import About from './pages/About/About';
 import Experience from './pages/Experience/Experience';

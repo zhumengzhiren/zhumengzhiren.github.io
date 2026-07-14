@@ -2,6 +2,7 @@ import React from "react";
 import {Container} from "react-bootstrap";
 import './Publications.css';
 import Particle from "../../Particle";
+import Seo from "../../Seo";
 
 function Publications() {
     const publications = [
@@ -60,6 +61,11 @@ function Publications() {
 
     return (
         <section>
+            <Seo
+                title="Publications | Yuanfan Chen"
+                description="Research publications by Yuanfan Chen on tail-aware LLM inference scheduling and DPU performance for cloud data processing."
+                path="/publications"
+            />
             <Container fluid className="pub-page">
                 <Particle />
                 <Container>

@@ -19,11 +19,15 @@
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^3.0.0",
+    "react-helmet-async": "^3.0.0",
     "react-icons": "^5.3.0",
     "react-parallax-tilt": "^1.7.251",
     "react-pdf": "^9.1.0",
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
+    "react-snap": "^1.23.0",
+    "react-snap": "^1.23.0",
     "react-tsparticles": "^2.12.2",
     "tsparticles": "^3.5.0",
     "tsparticles-interaction-external-trail": "^2.12.0",
@@ -33,6 +37,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "PUPPETEER_EXECUTABLE_PATH=\"${PUPPETEER_EXECUTABLE_PATH:-/Applications/Google Chrome.app/Contents/MacOS/Google Chrome}\" react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -54,6 +59,22 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "reactSnap": {
+    "concurrency": 1,
+    "crawl": false,
+    "include": [
+      "/",
+      "/about",
+      "/experience",
+      "/publications",
+      "/resume",
+      "/exercise"
+    ],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
     ]
   },
   "devDependencies": {
