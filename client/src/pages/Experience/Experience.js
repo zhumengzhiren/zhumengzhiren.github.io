@@ -24,7 +24,7 @@ function Experience() {
                         <div className="timeline-item fade-in">
                             <div className="timeline-card">
                                 <div className="timeline-logo">
-                                    <img src={process.env.PUBLIC_URL + "/characterai.svg"} alt="Character.AI" />
+                                    <img src={process.env.PUBLIC_URL + "/characterai.png"} alt="Character.AI" />
                                 </div>
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
