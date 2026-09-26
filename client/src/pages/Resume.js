@@ -28,7 +28,7 @@ function Resume() {
         <div>
             <Seo
                 title="Resume | Yuanfan Chen"
-                description="Resume of Yuanfan Chen, an ML systems researcher with experience in LLM serving, distributed systems, databases, and DPU research."
+                description="Resume of Yuanfan Chen, a machine learning infrastructure engineer working on LLM inference optimization, with prior research in scheduling, distributed systems, and DPUs."
                 path="/resume"
             />
             <Container fluid className="resume-section">

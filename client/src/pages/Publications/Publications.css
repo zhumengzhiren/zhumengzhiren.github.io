@@ -201,3 +201,13 @@
     .pub-links { flex-wrap: wrap; }
     .pub-link-btn { min-height: 34px; display: inline-flex; align-items: center; }
 }
+
+/* Open-source repo links reuse the title style */
+.pub-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pub-title a:hover {
+    text-decoration: underline;
+}

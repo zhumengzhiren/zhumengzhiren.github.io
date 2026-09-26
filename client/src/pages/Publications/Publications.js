@@ -14,21 +14,21 @@ function Publications() {
                 "Jiayang Chen", "Esha Choukse", "Haoran Qiu",
                 "G. Edward Suh", "Rodrigo Fonseca", "Ziv Scully", "Udit Gupta"
             ],
-            venue: "ICML 2026",
+            venue: "ICML",
             year: "2026",
             arxiv: "https://arxiv.org/abs/2606.18431",
             website: "https://yl3469.github.io/uniboost-icml26/",
             abstract: "LLM serving exhibits extreme length variability, making size-based scheduling difficult in practice. Recent LLM schedulers approximate SJF/SRPT using predicted decode lengths or rank and primarily report mean-centric metrics (e.g., TTFT/TBT). We show these prediction-driven policies can be fragile under distribution shifts, bursty arrivals, and GPU memory pressure, and still offer limited control over tail latency (P90–P99) that dominates user experience—even with perfect decode-length knowledge. We introduce a distribution-aware, prediction-free scheduling framework that replaces explicit length prediction with soft, γ-parameterized priority boosting driven by lightweight statistical signals. Our design co-optimizes scheduling with cache-aware preemption to account for memory-coupled decode dynamics that vary across workload mixes. Evaluated on Azure production traces, our method achieves a P99 TTLT up to 35–50% lower than SRPT with perfect length prediction and a TTFT 34–47% lower across various workloads, including reasoning-heavy and chat-heavy tasks, demonstrating a robust alternative for tail-latency optimization in online LLM serving."
         },
         {
-            title: "Making Sense of DPU Performance for Cloud Data Processing: [Experiment, Analysis & Benchmark]",
+            title: "Making Sense of DPU Performance for Cloud Data Processing",
             authors: [
                 "Jiasheng Hu", "Chihan Cui",
                 {name: "Yuanfan Chen", self: true},
                 "Philip A. Bernstein", "Jialin Li", "Qizhen Zhang"
             ],
-            venue: "arXiv preprint",
-            year: "2025",
+            venue: "SoCC (17th ACM Symposium on Cloud Computing)",
+            year: "2026",
             arxiv: "https://arxiv.org/abs/2504.05536",
             abstract: "Data processing units (DPUs, SoC-based SmartNICs) are emerging data center hardware that provide opportunities to address cloud data processing challenges. We developed a DPU benchmarking framework that encompasses a suite of data processing tasks from primitive compute, memory, and I/O operations and hardware-accelerated tasks to macro-level cloud database modules and a full-fledged, lightweight DBMS."
         },
@@ -40,6 +40,44 @@ function Publications() {
             venue: "IEEE Journal on Selected Areas in Information Theory (JSAIT)",
             detail: "Special Issue on Energy and Data Efficiency in AI",
             year: "2026",
+        },
+    ];
+
+    const contributions = [
+        {
+            repo: "LMCache",
+            repoUrl: "https://github.com/LMCache/LMCache",
+            description: "KV-cache hit observability for the multi-process lookup path: revived and landed L1/L2 hit attribution and early-exit reasons on the lookup event, then added the Prometheus counters that aggregate them per model. Both merged.",
+            links: [
+                {label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
+                {label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
+            ],
+        },
+        {
+            repo: "vLLM",
+            repoUrl: "https://github.com/vllm-project/vllm",
+            description: "Added gelu_tanh to the AITER fp8 fused-MoE backend for Gemma-4-style models and fixed a silent correctness bug: padded fp8 expert weights were allocated uninitialized, so pad rows leaked into the quant scale and layer output. Approved, in review.",
+            links: [
+                {label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
+            ],
+        },
+        {
+            repo: "AITER (ROCm)",
+            repoUrl: "https://github.com/ROCm/aiter",
+            description: "Proposed the gfx942 unified-attention prefill config fix for Gemma-4 head-512 layers; the maintainers' dtype-split follow-up benchmarks against it and carries the end-to-end MI325X vLLM serving validation. In review.",
+            links: [
+                {label: "PR #5649", url: "https://github.com/ROCm/aiter/pull/5649"},
+                {label: "PR #5650", url: "https://github.com/ROCm/aiter/pull/5650"},
+            ],
+        },
+        {
+            repo: "SGLang-Omni",
+            repoUrl: "https://github.com/sgl-project/sglang-omni",
+            description: "Wrote the CUDA IPC weight export/import library and MPS-DP launcher that let data-parallel replicas on one GPU share model weights (merged); co-developed Restage, which ranks multi-stage residency shapes from a one-GPU calibration instead of a placement grid (in review).",
+            links: [
+                {label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
+                {label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
+            ],
         },
     ];
 
@@ -63,7 +101,7 @@ function Publications() {
         <section>
             <Seo
                 title="Publications | Yuanfan Chen"
-                description="Research publications by Yuanfan Chen on tail-aware LLM inference scheduling and DPU performance for cloud data processing."
+                description="Publications by Yuanfan Chen on tail-aware LLM inference scheduling (ICML 2026) and DPU performance for cloud data processing (SoCC 2026), plus open-source contributions to LMCache, vLLM, AITER, and SGLang-Omni."
                 path="/publications"
             />
             <Container fluid className="pub-page">
@@ -116,6 +154,28 @@ function Publications() {
                                         <p className="pub-abstract">{pub.abstract}</p>
                                     </details>
                                 )}
+                            </li>
+                        ))}
+                    </ol>
+
+                    <h1 className="pub-section-header fade-in" style={{marginTop: "60px"}}>
+                        <span>OPEN SOURCE</span>
+                    </h1>
+
+                    <ol className="pub-list">
+                        {contributions.map((c, index) => (
+                            <li key={index} className="pub-entry fade-in">
+                                <div className="pub-title">
+                                    <a href={c.repoUrl} target="_blank" rel="noreferrer">{c.repo}</a>
+                                </div>
+                                <div className="pub-authors">{c.description}</div>
+                                <div className="pub-links">
+                                    {c.links.map((l, j) => (
+                                        <a key={j} href={l.url} target="_blank" rel="noreferrer" className="pub-link-btn">
+                                            {l.label}
+                                        </a>
+                                    ))}
+                                </div>
                             </li>
                         ))}
                     </ol>

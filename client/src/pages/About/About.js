@@ -11,7 +11,7 @@ function About() {
         <section>
             <Seo
                 title="About | Yuanfan Chen"
-                description="About Yuanfan Chen, an ML systems researcher and Cornell University computer science graduate working on inference and distributed systems."
+                description="About Yuanfan Chen, a machine learning infrastructure engineer at Character.AI working on inference optimization for production LLM serving."
                 path="/about"
             />
             <Container className="about-page">
@@ -20,7 +20,7 @@ function About() {
                     <h1 className="about-name">Yuanfan Chen</h1>
                     <p className="about-name-cn">陈远梵</p>
                     <p className="about-tagline">
-                        M.Eng. Computer Science, Cornell University
+                        ML Infra Engineer, Inference Optimization · Character.AI
                     </p>
                     <div className="about-links">
                         <a href="mailto:yuanfan0504@gmail.com" className="about-link-item">
@@ -32,7 +32,7 @@ function About() {
                         <a href="https://linkedin.com/in/yuanfan-chen-97b1a8280" target="_blank" rel="noreferrer" className="about-link-item">
                             <FaLinkedinIn /> LinkedIn
                         </a>
-                        <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noreferrer" className="about-link-item">
+                        <a href="https://scholar.google.com/citations?user=5VBrhUEAAAAJ" target="_blank" rel="noreferrer" className="about-link-item">
                             <FaGoogleScholar /> Scholar
                         </a>
                     </div>
@@ -43,6 +43,10 @@ function About() {
                     <h2 className="about-section-title">ABOUT</h2>
                     <div className="about-bio">
                         <p>
+                            He is a Machine Learning Infra Engineer at{" "}
+                            <a href="https://character.ai/" target="_blank" rel="noreferrer" className="bio-link">
+                                Character.AI
+                            </a>, working on inference optimization for production LLM serving.
                             He completed his undergraduate and master's studies in Computer Science at the{" "}
                             <a href="https://www.utoronto.ca/" target="_blank" rel="noreferrer" className="bio-link">
                                 University of Toronto
@@ -57,8 +61,8 @@ function About() {
                             </a>, he has built strong expertise in Machine Learning Systems.
                         </p>
                         <p>
-                            His research specifically targets system-level bottlenecks in large-scale
-                            model inference, distributed scheduling, and hardware-aware kernel optimizations.
+                            His work targets system-level bottlenecks in large-scale model inference:
+                            KV-cache offloading, distributed scheduling, and hardware-aware kernel optimization.
                         </p>
                     </div>
                 </div>

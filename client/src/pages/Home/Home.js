@@ -3,7 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
 import Seo from "../../Seo";
 
-const description = "Yuanfan Chen is an ML systems researcher working on large-scale model inference, distributed scheduling, and hardware-aware optimization.";
+const description = "Yuanfan Chen is a machine learning infrastructure engineer at Character.AI working on inference optimization for production LLM serving: KV-cache offloading, scheduling, and hardware-aware kernel optimization.";
 
 const Home = () => {
     const [init, setInit] = useState(false);
@@ -110,7 +110,7 @@ const Home = () => {
 
     return (
         <>
-            <Seo title="Yuanfan Chen | ML Systems Researcher" description={description} />
+            <Seo title="Yuanfan Chen | ML Infra Engineer" description={description} />
             {init && <Particles id="tsparticles" options={options} />}
         </>
     );

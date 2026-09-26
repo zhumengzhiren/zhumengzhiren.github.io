@@ -9,7 +9,7 @@ function Experience() {
         <section>
             <Seo
                 title="Experience | Yuanfan Chen"
-                description="Research, engineering, and education experience of Yuanfan Chen across Cornell Tech, Tencent, and the University of Toronto."
+                description="Engineering, research, and education experience of Yuanfan Chen across Character.AI, Cornell Tech, Tencent, and the University of Toronto."
                 path="/experience"
             />
             <Container fluid className="experience-section">
@@ -20,6 +20,37 @@ function Experience() {
                     </h1>
 
                     <div className="timeline">
+                        {/* Character.AI */}
+                        <div className="timeline-item fade-in">
+                            <div className="timeline-card">
+                                <div className="timeline-logo">
+                                    <img src={process.env.PUBLIC_URL + "/characterai.svg"} alt="Character.AI" />
+                                </div>
+                                <div className="timeline-content">
+                                    <div className="timeline-top-row">
+                                        <h3 className="timeline-role">ML Infra Engineer, Inference Optimization</h3>
+                                        <span className="timeline-period">Aug 2026 – Present</span>
+                                    </div>
+                                    <span className="timeline-org">
+                                        <a href="https://character.ai/" target="_blank" rel="noreferrer">
+                                            Character.AI
+                                        </a>
+                                    </span>
+                                    <p className="timeline-description">
+                                        Production LLM serving on a vLLM + LMCache stack for large-scale multi-turn,
+                                        long-context chat. Hierarchical KV-cache offloading (prefix-cache hit 70% → 90%),
+                                        measurement-driven kernel optimization on AMD GPUs, and a real-traffic replay
+                                        benchmark that validates every change before rollout.
+                                    </p>
+                                    <div className="timeline-tags">
+                                        <span className="timeline-tag">LLM Serving</span>
+                                        <span className="timeline-tag">KV Cache</span>
+                                        <span className="timeline-tag">Kernel Optimization</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Jacobs Technion-Cornell Institute */}
                         <div className="timeline-item fade-in">
                             <div className="timeline-card">
