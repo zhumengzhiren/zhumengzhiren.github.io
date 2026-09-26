@@ -59,12 +59,12 @@ function Experience() {
                                 </div>
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
-                                        <h3 className="timeline-role">Research Assistant</h3>
+                                        <h3 className="timeline-role">Machine Learning System Researcher – S4AI Lab</h3>
                                         <span className="timeline-period">Sep 2025 – Present</span>
                                     </div>
                                     <span className="timeline-org">
-                                        <a href="https://tech.cornell.edu/jacobs-technion-cornell-institute/" target="_blank" rel="noreferrer">
-                                            Jacobs Technion-Cornell Institute
+                                        <a href="https://tech.cornell.edu/" target="_blank" rel="noreferrer">
+                                            Cornell Tech, Cornell University
                                         </a>
                                     </span>
                                     <p className="timeline-description">
@@ -96,27 +96,28 @@ function Experience() {
                                 </div>
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
-                                        <h3 className="timeline-role">AI Infra Engineer</h3>
+                                        <h3 className="timeline-role">Machine Learning Engineer</h3>
                                         <span className="timeline-period">May 2025 – Sep 2025</span>
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer">
-                                            Tencent
+                                            Tencent: Distributed Training and Inference
                                         </a>
                                     </span>
                                     <p className="timeline-description">
-                                        Core developer of{" "}
+                                        Distributed training and inference platform: tensor and data parallelism,
+                                        PagedAttention and continuous batching, GQA/DSA kernel optimization on NVIDIA
+                                        H200 and B200 profiled with Nsight Compute, and chunked prefill for long-context
+                                        throughput. Also a core developer of{" "}
                                         <a href="https://cloud.tencent.com/product/tchouse" target="_blank" rel="noreferrer" className="highlight-link">
                                             TCHouse-X
                                         </a>
-                                        . Designed admission control mechanisms for system stability.
-                                        Contributed to open-source ClickHouse-X with CI/CD pipelines.
-                                        Optimized fault-tolerant node recovery for distributed clusters.
+                                        : admission control, CI/CD for open-source ClickHouse-X, and fault-tolerant node recovery.
                                     </p>
                                     <div className="timeline-tags">
-                                        <span className="timeline-tag">OLAP Database</span>
+                                        <span className="timeline-tag">LLM Inference</span>
+                                        <span className="timeline-tag">Kernel Optimization</span>
                                         <span className="timeline-tag">Distributed Systems</span>
-                                        <span className="timeline-tag">Fault Tolerance</span>
                                     </div>
                                 </div>
                             </div>
@@ -130,18 +131,22 @@ function Experience() {
                                 </div>
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
-                                        <h3 className="timeline-role">Research Assistant</h3>
+                                        <h3 className="timeline-role">Undergraduate Student Researcher – Far Data Lab</h3>
                                         <span className="timeline-period">Jan 2024 – Feb 2025</span>
                                     </div>
                                     <span className="timeline-org">
-                                        <a href="https://fardatalab.org/" target="_blank" rel="noreferrer">
-                                            Far Data Lab, University of Toronto
+                                        <a href="https://www.utoronto.ca/" target="_blank" rel="noreferrer">
+                                            University of Toronto
                                         </a>
                                     </span>
                                     <p className="timeline-description">
                                         Supervised by{" "}
                                         <a href="https://qizhenzhang.me/" target="_blank" rel="noreferrer" className="highlight-link">
                                             Prof. Qizhen Zhang
+                                        </a>
+                                        {" "}at the{" "}
+                                        <a href="https://fardatalab.org/" target="_blank" rel="noreferrer" className="highlight-link">
+                                            Far Data Lab
                                         </a>
                                         . Co-designed{" "}
                                         <a href="https://arxiv.org/abs/2504.05536" target="_blank" rel="noreferrer" className="highlight-link">
