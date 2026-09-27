@@ -45,35 +45,27 @@ function Publications() {
 
     const contributions = [
         {
-            repo: "LMCache",
-            repoUrl: "https://github.com/LMCache/LMCache",
-            items: [
-                {text: "Revived and landed L1/L2 hit attribution and early-exit reasons on the multi-process lookup event.", label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
-                {text: "Added Prometheus counters that aggregate L1/L2 hits and early exits per model.", label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
-            ],
-        },
-        {
             repo: "vLLM",
             repoUrl: "https://github.com/vllm-project/vllm",
             items: [
-                {text: "Added gelu_tanh to the AITER fp8 fused-MoE backend for Gemma-4-style models.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
-                {text: "Fixed a silent correctness bug: padded fp8 expert weights were allocated uninitialized, leaking pad rows into the quant scale and layer output.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
+                {text: "Added gelu_tanh to the AITER fp8 fused-MoE backend.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
+                {text: "Fixed uninitialized padded fp8 expert weights that corrupted outputs.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
             ],
         },
         {
-            repo: "AITER (ROCm)",
-            repoUrl: "https://github.com/ROCm/aiter",
+            repo: "LMCache",
+            repoUrl: "https://github.com/LMCache/LMCache",
             items: [
-                {text: "Proposed the gfx942 unified-attention prefill config fix for Gemma-4 head-512 layers.", label: "PR #5649", url: "https://github.com/ROCm/aiter/pull/5649"},
-                {text: "Contributed the end-to-end MI325X vLLM serving validation to the maintainers' dtype-split follow-up, which benchmarks against that fix.", label: "PR #5650", url: "https://github.com/ROCm/aiter/pull/5650"},
+                {text: "L1/L2 cache-hit attribution for the multi-process lookup path.", label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
+                {text: "Prometheus counters for L1/L2 hits and early exits.", label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
             ],
         },
         {
             repo: "SGLang-Omni",
             repoUrl: "https://github.com/sgl-project/sglang-omni",
             items: [
-                {text: "Wrote the CUDA IPC weight export/import library and MPS-DP launcher that let data-parallel replicas on one GPU share model weights.", label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
-                {text: "Co-developed Restage, which ranks multi-stage residency shapes from a one-GPU calibration instead of a placement grid.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
+                {text: "Same-GPU weight sharing across data-parallel replicas via CUDA IPC and MPS.", label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
+                {text: "Co-developed Restage placement ranking for multi-stage pipelines.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
             ],
         },
     ];
@@ -98,7 +90,7 @@ function Publications() {
         <section>
             <Seo
                 title="Publications | Yuanfan Chen"
-                description="Publications by Yuanfan Chen on tail-aware LLM inference scheduling (ICML 2026) and DPU performance for cloud data processing (SoCC 2026), plus open-source contributions to LMCache, vLLM, AITER, and SGLang-Omni."
+                description="Publications by Yuanfan Chen on tail-aware LLM inference scheduling (ICML 2026) and DPU performance for cloud data processing (SoCC 2026), plus open-source contributions to vLLM, LMCache, and SGLang-Omni."
                 path="/publications"
             />
             <Container fluid className="pub-page">
