@@ -47,36 +47,33 @@ function Publications() {
         {
             repo: "LMCache",
             repoUrl: "https://github.com/LMCache/LMCache",
-            description: "KV-cache hit observability for the multi-process lookup path: revived and landed L1/L2 hit attribution and early-exit reasons on the lookup event, then added the Prometheus counters that aggregate them per model.",
-            links: [
-                {label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
-                {label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
+            items: [
+                {text: "Revived and landed L1/L2 hit attribution and early-exit reasons on the multi-process lookup event.", label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
+                {text: "Added Prometheus counters that aggregate L1/L2 hits and early exits per model.", label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
             ],
         },
         {
             repo: "vLLM",
             repoUrl: "https://github.com/vllm-project/vllm",
-            description: "Added gelu_tanh to the AITER fp8 fused-MoE backend for Gemma-4-style models and fixed a silent correctness bug: padded fp8 expert weights were allocated uninitialized, so pad rows leaked into the quant scale and layer output.",
-            links: [
-                {label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
+            items: [
+                {text: "Added gelu_tanh to the AITER fp8 fused-MoE backend for Gemma-4-style models.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
+                {text: "Fixed a silent correctness bug: padded fp8 expert weights were allocated uninitialized, leaking pad rows into the quant scale and layer output.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
             ],
         },
         {
             repo: "AITER (ROCm)",
             repoUrl: "https://github.com/ROCm/aiter",
-            description: "Proposed the gfx942 unified-attention prefill config fix for Gemma-4 head-512 layers; the maintainers' dtype-split follow-up benchmarks against it and carries the end-to-end MI325X vLLM serving validation.",
-            links: [
-                {label: "PR #5649", url: "https://github.com/ROCm/aiter/pull/5649"},
-                {label: "PR #5650", url: "https://github.com/ROCm/aiter/pull/5650"},
+            items: [
+                {text: "Proposed the gfx942 unified-attention prefill config fix for Gemma-4 head-512 layers.", label: "PR #5649", url: "https://github.com/ROCm/aiter/pull/5649"},
+                {text: "Contributed the end-to-end MI325X vLLM serving validation to the maintainers' dtype-split follow-up, which benchmarks against that fix.", label: "PR #5650", url: "https://github.com/ROCm/aiter/pull/5650"},
             ],
         },
         {
             repo: "SGLang-Omni",
             repoUrl: "https://github.com/sgl-project/sglang-omni",
-            description: "Wrote the CUDA IPC weight export/import library and MPS-DP launcher that let data-parallel replicas on one GPU share model weights; co-developed Restage, which ranks multi-stage residency shapes from a one-GPU calibration instead of a placement grid.",
-            links: [
-                {label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
-                {label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
+            items: [
+                {text: "Wrote the CUDA IPC weight export/import library and MPS-DP launcher that let data-parallel replicas on one GPU share model weights.", label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
+                {text: "Co-developed Restage, which ranks multi-stage residency shapes from a one-GPU calibration instead of a placement grid.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
             ],
         },
     ];
@@ -162,23 +159,25 @@ function Publications() {
                         <span>OPEN SOURCE</span>
                     </h1>
 
-                    <ol className="pub-list">
+                    <div className="oss-list">
                         {contributions.map((c, index) => (
-                            <li key={index} className="pub-entry fade-in">
+                            <div key={index} className="oss-entry fade-in">
                                 <div className="pub-title">
                                     <a href={c.repoUrl} target="_blank" rel="noreferrer">{c.repo}</a>
                                 </div>
-                                <div className="pub-authors">{c.description}</div>
-                                <div className="pub-links">
-                                    {c.links.map((l, j) => (
-                                        <a key={j} href={l.url} target="_blank" rel="noreferrer" className="pub-link-btn">
-                                            {l.label}
-                                        </a>
+                                <ul className="oss-items">
+                                    {c.items.map((item, j) => (
+                                        <li key={j}>
+                                            {item.text}{" "}
+                                            <a href={item.url} target="_blank" rel="noreferrer" className="pub-link-btn oss-pr">
+                                                {item.label}
+                                            </a>
+                                        </li>
                                     ))}
-                                </div>
-                            </li>
+                                </ul>
+                            </div>
                         ))}
-                    </ol>
+                    </div>
 
                     <h1 className="pub-section-header fade-in" style={{marginTop: "60px"}}>
                         <span>ACADEMIC SERVICE</span>

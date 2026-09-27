@@ -211,3 +211,39 @@
 .pub-title a:hover {
     text-decoration: underline;
 }
+
+/* Open Source: project heading + bullet list of contributions */
+.oss-list {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.oss-entry {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.oss-entry:last-child {
+    border-bottom: none;
+}
+
+.oss-items {
+    margin: 6px 0 0 0;
+    padding-left: 20px;
+    font-size: 0.92em;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+}
+
+.oss-items li {
+    margin-bottom: 6px;
+}
+
+.oss-items li::marker {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.oss-pr {
+    margin-left: 4px;
+    white-space: nowrap;
+}
