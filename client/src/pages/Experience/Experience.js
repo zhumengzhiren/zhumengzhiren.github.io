@@ -76,13 +76,17 @@ function Experience() {
                                         <a href="https://yueying-lisa-li.org/" target="_blank" rel="noreferrer" className="highlight-link">
                                             Yueying (Lisa) Li
                                         </a>
-                                        . Built high-fidelity simulations (Vidur) and multi-class experimentation pipelines
-                                        to reproduce and benchmark SOTA LLM schedulers like SLOServe and Sarathi.
+                                        . Showed that reasoning workloads break output-length prediction in LLM schedulers,
+                                        degrading P99 TTFT by up to 8×. Developed PTA (Prefill → Think → Answer) disaggregated
+                                        serving with per-stage DVFS, KV-cache, and parallelism settings under power caps, backed
+                                        by a GPU frequency–performance model and an online optimizer for mixed request classes.
+                                        Designed a prediction-free, tail-aware scheduler (γ-Boost) with KV-cache-aware preemption
+                                        that cut tail TTFT/TTLT by 37–60% on Azure production traces.
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
-                                        <span className="timeline-tag">Distributed Scheduling</span>
-                                        <span className="timeline-tag">Simulation</span>
+                                        <span className="timeline-tag">Disaggregated Serving</span>
+                                        <span className="timeline-tag">Energy-Aware Scheduling</span>
                                     </div>
                                 </div>
                             </div>
