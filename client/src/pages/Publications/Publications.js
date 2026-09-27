@@ -49,7 +49,6 @@ function Publications() {
             repoUrl: "https://github.com/vllm-project/vllm",
             items: [
                 {text: "Root-caused and fixed a production bug where uninitialized padded fp8 MoE expert weights made some replicas silently emit corrupted tokens.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
-                {text: "Added gelu_tanh to the AITER fp8 fused-MoE backend.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
             ],
         },
         {
