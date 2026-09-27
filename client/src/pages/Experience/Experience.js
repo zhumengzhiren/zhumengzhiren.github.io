@@ -97,7 +97,7 @@ function Experience() {
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
                                         <h3 className="timeline-role">Machine Learning Engineer</h3>
-                                        <span className="timeline-period">May 2025 – Sep 2025</span>
+                                        <span className="timeline-period">May 2025 – Jul 2025</span>
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer">
@@ -105,19 +105,16 @@ function Experience() {
                                         </a>
                                     </span>
                                     <p className="timeline-description">
-                                        Distributed training and inference platform: tensor and data parallelism,
-                                        PagedAttention and continuous batching, GQA/DSA kernel optimization on NVIDIA
-                                        H200 and B200 profiled with Nsight Compute, and chunked prefill for long-context
-                                        throughput. Also a core developer of{" "}
-                                        <a href="https://cloud.tencent.com/product/tchouse" target="_blank" rel="noreferrer" className="highlight-link">
-                                            TCHouse-X
-                                        </a>
-                                        : admission control, CI/CD for open-source ClickHouse-X, and fault-tolerant node recovery.
+                                        Request-level admission control with stepwise latency profiling and SLA-aware
+                                        priority scheduling, holding 100% goodput under 2–10× QPS bursts. Prefix caching
+                                        with SGLang RadixAttention and prefill-first chunking, cutting P99 TTFT by about 40%.
+                                        CUDA attention-kernel optimization for GQA and DeepSeek FlashMLA, profiled with
+                                        Nsight Compute, for about 20% and 15% throughput gains.
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Inference</span>
+                                        <span className="timeline-tag">Admission Control</span>
                                         <span className="timeline-tag">Kernel Optimization</span>
-                                        <span className="timeline-tag">Distributed Systems</span>
                                     </div>
                                 </div>
                             </div>
