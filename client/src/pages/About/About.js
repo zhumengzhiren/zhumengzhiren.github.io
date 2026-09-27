@@ -11,7 +11,7 @@ function About() {
         <section>
             <Seo
                 title="About | Yuanfan Chen"
-                description="About Yuanfan Chen, a machine learning infrastructure engineer at Character.AI working on inference optimization for production LLM serving."
+                description="About Yuanfan Chen, an ML systems researcher and infrastructure engineer at Character.AI working on inference optimization for production LLM serving."
                 path="/about"
             />
             <Container className="about-page">
@@ -61,7 +61,7 @@ function About() {
                             </a>, he has built strong expertise in Machine Learning Systems.
                         </p>
                         <p>
-                            His work targets system-level bottlenecks in large-scale model inference:
+                            His research specifically targets system-level bottlenecks in large-scale model inference:
                             KV-cache offloading, distributed scheduling, and hardware-aware kernel optimization.
                         </p>
                     </div>
