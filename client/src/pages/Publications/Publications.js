@@ -47,7 +47,7 @@ function Publications() {
         {
             repo: "LMCache",
             repoUrl: "https://github.com/LMCache/LMCache",
-            description: "KV-cache hit observability for the multi-process lookup path: revived and landed L1/L2 hit attribution and early-exit reasons on the lookup event, then added the Prometheus counters that aggregate them per model. Both merged.",
+            description: "KV-cache hit observability for the multi-process lookup path: revived and landed L1/L2 hit attribution and early-exit reasons on the lookup event, then added the Prometheus counters that aggregate them per model.",
             links: [
                 {label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
                 {label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
@@ -56,7 +56,7 @@ function Publications() {
         {
             repo: "vLLM",
             repoUrl: "https://github.com/vllm-project/vllm",
-            description: "Added gelu_tanh to the AITER fp8 fused-MoE backend for Gemma-4-style models and fixed a silent correctness bug: padded fp8 expert weights were allocated uninitialized, so pad rows leaked into the quant scale and layer output. Approved, in review.",
+            description: "Added gelu_tanh to the AITER fp8 fused-MoE backend for Gemma-4-style models and fixed a silent correctness bug: padded fp8 expert weights were allocated uninitialized, so pad rows leaked into the quant scale and layer output.",
             links: [
                 {label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
             ],
@@ -64,7 +64,7 @@ function Publications() {
         {
             repo: "AITER (ROCm)",
             repoUrl: "https://github.com/ROCm/aiter",
-            description: "Proposed the gfx942 unified-attention prefill config fix for Gemma-4 head-512 layers; the maintainers' dtype-split follow-up benchmarks against it and carries the end-to-end MI325X vLLM serving validation. In review.",
+            description: "Proposed the gfx942 unified-attention prefill config fix for Gemma-4 head-512 layers; the maintainers' dtype-split follow-up benchmarks against it and carries the end-to-end MI325X vLLM serving validation.",
             links: [
                 {label: "PR #5649", url: "https://github.com/ROCm/aiter/pull/5649"},
                 {label: "PR #5650", url: "https://github.com/ROCm/aiter/pull/5650"},
@@ -73,7 +73,7 @@ function Publications() {
         {
             repo: "SGLang-Omni",
             repoUrl: "https://github.com/sgl-project/sglang-omni",
-            description: "Wrote the CUDA IPC weight export/import library and MPS-DP launcher that let data-parallel replicas on one GPU share model weights (merged); co-developed Restage, which ranks multi-stage residency shapes from a one-GPU calibration instead of a placement grid (in review).",
+            description: "Wrote the CUDA IPC weight export/import library and MPS-DP launcher that let data-parallel replicas on one GPU share model weights; co-developed Restage, which ranks multi-stage residency shapes from a one-GPU calibration instead of a placement grid.",
             links: [
                 {label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
                 {label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
