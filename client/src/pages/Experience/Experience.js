@@ -37,7 +37,7 @@ function Experience() {
                                         </a>
                                     </span>
                                     <p className="timeline-description">
-                                        Production LLM serving on a vLLM + LMCache stack for large-scale multi-turn,
+                                        Production LLM serving across multiple inference stacks for large-scale multi-turn,
                                         long-context chat. Hierarchical KV-cache offloading (prefix-cache hit 70% → 90%),
                                         profiler-driven attention-kernel tuning on AMD GPUs (4.3× faster prefill kernel,
                                         42–48% lower P99 TTFT at equal load), and a real-traffic replay benchmark that
