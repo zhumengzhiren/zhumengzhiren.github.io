@@ -28,7 +28,7 @@ function Experience() {
                                 </div>
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
-                                        <h3 className="timeline-role">ML Infra Engineer, Inference Optimization</h3>
+                                        <h3 className="timeline-role">AI Infra Engineer, Inference Optimization</h3>
                                         <span className="timeline-period">Aug 2026 – Present</span>
                                     </div>
                                     <span className="timeline-org">
@@ -101,7 +101,7 @@ function Experience() {
                                 </div>
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
-                                        <h3 className="timeline-role">Machine Learning Engineer</h3>
+                                        <h3 className="timeline-role">AI Infra Engineer</h3>
                                         <span className="timeline-period">May 2025 – Jul 2025</span>
                                     </div>
                                     <span className="timeline-org">
