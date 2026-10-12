@@ -111,8 +111,7 @@ function Experience() {
                                     </span>
                                     <p className="timeline-description">
                                         Request-level admission control with stepwise latency profiling and SLA-aware
-                                        priority scheduling, holding 100% goodput under 2–10× QPS bursts. Prefix caching
-                                        with SGLang RadixAttention and prefill-first chunking, cutting P99 TTFT by about 40%.
+                                        priority scheduling, holding 100% goodput under 2–10× QPS bursts.
                                         CUDA attention-kernel optimization for GQA and DeepSeek FlashMLA, profiled with
                                         Nsight Compute, for about 20% and 15% throughput gains.
                                     </p>
