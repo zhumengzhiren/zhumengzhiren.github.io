@@ -82,7 +82,9 @@ function Experience() {
                                         (γ-Boost) with KV-cache-aware preemption that cut tail TTFT/TTLT by 37–60% on Azure
                                         production traces (ICML 2026). Developed PTA (Prefill → Think → Answer) disaggregated
                                         serving with per-stage DVFS, KV-cache, and GPU allocation under power caps, cutting
-                                        P90 time-between-answer-tokens by 49–71% versus prefill–decode disaggregation.
+                                        P90 time-between-answer-tokens by 49–71% versus prefill–decode disaggregation, and a
+                                        Flex service tier with a KKT-based online solver that turns bounded latency slack into
+                                        per-stage settings within milliseconds (78.3% vs. 47.6% goodput at a 30% power cap).
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
