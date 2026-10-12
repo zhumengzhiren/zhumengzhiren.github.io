@@ -78,11 +78,12 @@ function Experience() {
                                             Yueying (Lisa) Li
                                         </a>
                                         . Showed that reasoning workloads break output-length prediction in LLM schedulers,
-                                        degrading P99 TTFT by up to 8×. Developed PTA (Prefill → Think → Answer) disaggregated
-                                        serving with per-stage DVFS, KV-cache, and parallelism settings under power caps, backed
-                                        by a GPU frequency–performance model and an online optimizer for mixed request classes.
-                                        Designed a prediction-free, tail-aware scheduler (γ-Boost) with KV-cache-aware preemption
-                                        that cut tail TTFT/TTLT by 37–60% on Azure production traces.
+                                        inflating P99 TTFT by over 10×, and designed a prediction-free, tail-aware scheduler
+                                        (γ-Boost) with KV-cache-aware preemption that cut tail TTFT/TTLT by 37–60% on Azure
+                                        production traces (ICML 2026). Developed PTA (Prefill → Think → Answer) disaggregated
+                                        serving with per-stage DVFS, KV-cache, and GPU allocation under power caps, backed by a
+                                        GPU frequency–performance model and a KKT-based online optimizer: 1.64× the best
+                                        baseline's goodput at a 30% power cap with latency-critical tails within 1.3× nominal.
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
