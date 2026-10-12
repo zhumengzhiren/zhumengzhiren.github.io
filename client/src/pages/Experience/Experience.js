@@ -81,9 +81,8 @@ function Experience() {
                                         inflating P99 TTFT by over 10×, and designed a prediction-free, tail-aware scheduler
                                         (γ-Boost) with KV-cache-aware preemption that cut tail TTFT/TTLT by 37–60% on Azure
                                         production traces (ICML 2026). Developed PTA (Prefill → Think → Answer) disaggregated
-                                        serving with per-stage DVFS, KV-cache, and GPU allocation under power caps, backed by a
-                                        GPU frequency–performance model and a KKT-based online optimizer: 1.64× the best
-                                        baseline's goodput at a 30% power cap with latency-critical tails within 1.3× nominal.
+                                        serving with per-stage DVFS, KV-cache, and GPU allocation under power caps, cutting
+                                        P90 time-between-answer-tokens by 49–71% versus prefill–decode disaggregation.
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
