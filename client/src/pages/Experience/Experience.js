@@ -41,7 +41,7 @@ function Experience() {
                                         long-context chat. Hierarchical KV-cache offloading (prefix-cache hit 70% → 90%),
                                         profiler-driven attention-kernel tuning on AMD GPUs (4.3× faster prefill kernel,
                                         42–48% lower P99 TTFT at equal load), and a production traffic replay tool that
-                                        replays requests at their true arrival times, matches production metrics
+                                        replays requests in real arrival time with session-aware multi-turn replay, matches production metrics
                                         within the pod's own variance, and underpins every later optimization.
                                     </p>
                                     <div className="timeline-tags">
