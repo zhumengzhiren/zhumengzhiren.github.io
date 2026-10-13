@@ -60,6 +60,14 @@ function Publications() {
             ],
         },
         {
+            repo: "AITER (ROCm)",
+            repoUrl: "https://github.com/ROCm/aiter",
+            items: [
+                {text: "Proposed the gfx942 unified-attention prefill config fix for Gemma-4 head-512 layers.", label: "PR #5649", url: "https://github.com/ROCm/aiter/pull/5649"},
+                {text: "Contributed end-to-end MI325X serving validation to the maintainers' dtype-split follow-up.", label: "PR #5650", url: "https://github.com/ROCm/aiter/pull/5650"},
+            ],
+        },
+        {
             repo: "SGLang-Omni",
             repoUrl: "https://github.com/sgl-project/sglang-omni",
             items: [
@@ -89,7 +97,7 @@ function Publications() {
         <section>
             <Seo
                 title="Publications | Yuanfan Chen"
-                description="Publications by Yuanfan Chen on tail-aware LLM inference scheduling (ICML 2026) and DPU performance for cloud data processing (SoCC 2026), plus open-source contributions to vLLM, LMCache, and SGLang-Omni."
+                description="Publications by Yuanfan Chen on tail-aware LLM inference scheduling (ICML 2026) and DPU performance for cloud data processing (SoCC 2026), plus open-source contributions to vLLM, LMCache, AITER, and SGLang-Omni."
                 path="/publications"
             />
             <Container fluid className="pub-page">
