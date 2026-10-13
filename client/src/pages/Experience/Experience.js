@@ -77,10 +77,12 @@ function Experience() {
                                         <a href="https://yueying-lisa-li.org/" target="_blank" rel="noreferrer" className="highlight-link">
                                             Yueying (Lisa) Li
                                         </a>
-                                        . Showed that reasoning workloads break output-length prediction in LLM schedulers,
-                                        inflating P99 TTFT by over 10×, and designed a prediction-free, tail-aware scheduler
-                                        (γ-Boost) with KV-cache-aware preemption that cut tail TTFT/TTLT by 37–60% on Azure
-                                        production traces (ICML 2026). Developed PTA (Prefill → Think → Answer) disaggregated
+                                        . Designed a measurement-driven placement planner for multi-stage speech serving that
+                                        sets stage placement, memory split, replica count, and GPU-sharing mode from two short
+                                        probes per candidate plan (+40% on Qwen3-Omni 30B, +60% on Qwen3-TTS 1.7B over shipped
+                                        configurations). Designed a prediction-free, tail-aware scheduler (γ-Boost) with
+                                        KV-cache-aware preemption that cut tail TTFT/TTLT by 37–60% on Azure production traces
+                                        (ICML 2026). Developed PTA (Prefill → Think → Answer) disaggregated
                                         serving with per-stage DVFS, KV-cache, and GPU allocation under power caps, cutting
                                         P90 time-between-answer-tokens by 49–71% versus prefill–decode disaggregation, and a
                                         Flex service tier with a KKT-based online solver that turns bounded latency slack into
