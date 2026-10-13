@@ -72,7 +72,7 @@ function Publications() {
             repoUrl: "https://github.com/sgl-project/sglang-omni",
             items: [
                 {text: "Same-GPU weight sharing across data-parallel replicas via CUDA IPC and MPS.", label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
-                {text: "Co-developed Restage placement ranking for multi-stage pipelines.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
+                {text: "Designed the placement method that picks each pipeline stage's GPU count, replicas, and co-location from two single-GPU probes instead of a manual search grid.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
             ],
         },
     ];
