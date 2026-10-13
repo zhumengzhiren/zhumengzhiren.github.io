@@ -48,31 +48,31 @@ function Publications() {
             repo: "vLLM",
             repoUrl: "https://github.com/vllm-project/vllm",
             items: [
-                {text: "Root-caused and fixed a production bug where uninitialized padded fp8 MoE expert weights made some replicas silently emit corrupted tokens.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
+                {text: "Found and fixed a silent output-corruption bug in the AITER fp8 MoE path, where padded expert weights were left uninitialized.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
             ],
         },
         {
             repo: "LMCache",
             repoUrl: "https://github.com/LMCache/LMCache",
             items: [
-                {text: "L1/L2 cache-hit attribution for the multi-process lookup path.", label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
-                {text: "Prometheus counters for L1/L2 hits and early exits.", label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
+                {text: "Per-tier cache-hit metrics so operators can see where KV-cache lookups hit, miss, or exit early.", label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
+                {text: "Prometheus counters that aggregate those hits, misses, and early exits per model.", label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
             ],
         },
         {
             repo: "AITER (ROCm)",
             repoUrl: "https://github.com/ROCm/aiter",
             items: [
-                {text: "Proposed the gfx942 unified-attention prefill config fix for Gemma-4 head-512 layers.", label: "PR #5649", url: "https://github.com/ROCm/aiter/pull/5649"},
-                {text: "Contributed end-to-end MI325X serving validation to the maintainers' dtype-split follow-up.", label: "PR #5650", url: "https://github.com/ROCm/aiter/pull/5650"},
+                {text: "Proposed a prefill attention config for Gemma-4 head-512 layers on MI325X.", label: "PR #5649", url: "https://github.com/ROCm/aiter/pull/5649"},
+                {text: "Validated the maintainers' follow-up end to end in vLLM.", label: "PR #5650", url: "https://github.com/ROCm/aiter/pull/5650"},
             ],
         },
         {
             repo: "SGLang-Omni",
             repoUrl: "https://github.com/sgl-project/sglang-omni",
             items: [
-                {text: "Same-GPU weight sharing across data-parallel replicas via CUDA IPC and MPS.", label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
-                {text: "Built a placement planner for multi-stage speech serving that sets stage placement, memory split, replica count, and GPU-sharing mode from two short probes per candidate plan rather than a full frontier sweep.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
+                {text: "Same-GPU weight sharing across data-parallel replicas.", label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
+                {text: "A placement planner for multi-stage speech serving.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
             ],
         },
     ];
