@@ -38,7 +38,7 @@ function Experience() {
                                     </span>
                                     <p className="timeline-description">
                                         Production LLM serving across multiple inference stacks for large-scale multi-turn,
-                                        long-context chat. APC-aware KV-cache lookup in LMCache (56% fewer L2 prefetch loads, 20% lower p50 TTFT),
+                                        long-context chat. APC-aware KV-cache lookup in LMCache (20% lower p50 TTFT),
                                         profiler-driven attention-kernel tuning on AMD GPUs (4.3× faster prefill kernel,
                                         42–48% lower P99 TTFT at equal load), and a production traffic replay tool that
                                         replays requests in real arrival time with session-aware multi-turn replay, matches production metrics
