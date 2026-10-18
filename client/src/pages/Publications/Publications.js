@@ -58,6 +58,7 @@ function Publications() {
                 {text: "Per-tier cache-hit metrics so operators can see where KV-cache lookups hit, miss, or exit early.", label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
                 {text: "Prometheus counters that aggregate those hits, misses, and early exits per model.", label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
                 {text: "Attribution of delivered keys to L1/L2 per object group on retrieve, exported as counters.", label: "PR #5842", url: "https://github.com/LMCache/LMCache/pull/5842"},
+                {text: "A/B-validated an upstream change that skips prefixes vLLM already caches on replayed production traffic (−56% L2 prefetch loads, −20% p50 TTFT) and flagged the L1-hit overcount it introduced.", label: "PR #5383", url: "https://github.com/LMCache/LMCache/pull/5383"},
             ],
         },
         {
