@@ -33,7 +33,7 @@ function Experience() {
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://character.ai/" target="_blank" rel="noreferrer">
-                                            Character.AI: Inference, Reinforcement Learning &amp; Multimodal Infra
+                                            Character.AI: Inference, Training &amp; Multimodal Infra
                                         </a>
                                     </span>
                                     <p className="timeline-description">
