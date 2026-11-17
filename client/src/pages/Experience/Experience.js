@@ -33,7 +33,7 @@ function Experience() {
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://character.ai/" target="_blank" rel="noreferrer">
-                                            Character.AI: Inference, RL &amp; Multimodal Infra
+                                            Character.AI: Inference, Reinforcement Learning &amp; Multimodal Infra
                                         </a>
                                     </span>
                                     <p className="timeline-description">
@@ -111,7 +111,7 @@ function Experience() {
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer">
-                                            Tencent Hunyuan: RL Infra
+                                            Tencent Hunyuan: Reinforcement Learning Infra
                                         </a>
                                     </span>
                                     <p className="timeline-description">
