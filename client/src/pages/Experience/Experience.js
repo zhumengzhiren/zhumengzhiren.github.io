@@ -28,12 +28,12 @@ function Experience() {
                                 </div>
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
-                                        <h3 className="timeline-role">AI Infra Engineer, Inference Optimization</h3>
+                                        <h3 className="timeline-role">Machine Learning System Researcher/Architect</h3>
                                         <span className="timeline-period">Aug 2026 – Present</span>
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://character.ai/" target="_blank" rel="noreferrer">
-                                            Character.AI
+                                            Character.AI: Inference Optimization
                                         </a>
                                     </span>
                                     <p className="timeline-description">
@@ -106,12 +106,12 @@ function Experience() {
                                 </div>
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
-                                        <h3 className="timeline-role">AI Infra Engineer</h3>
+                                        <h3 className="timeline-role">Research Engineer</h3>
                                         <span className="timeline-period">May 2025 – Jul 2025</span>
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer">
-                                            Tencent: Distributed Training and Inference
+                                            Tencent Hunyuan: Distributed Training and Inference
                                         </a>
                                     </span>
                                     <p className="timeline-description">
@@ -158,7 +158,7 @@ function Experience() {
                                         <a href="https://arxiv.org/abs/2504.05536" target="_blank" rel="noreferrer" className="highlight-link">
                                             dpBento
                                         </a>
-                                        {" "}to benchmark heterogeneous DPUs for data processing offload.
+                                        {" "}to benchmark heterogeneous DPUs for data processing offload (SoCC 2026).
                                         Studied RocksDB internals and explored DPU offload for compute-storage disaggregation.
                                     </p>
                                     <div className="timeline-tags">

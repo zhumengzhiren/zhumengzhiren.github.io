@@ -20,7 +20,7 @@ function About() {
                     <h1 className="about-name">Yuanfan Chen</h1>
                     <p className="about-name-cn">陈远梵</p>
                     <p className="about-tagline">
-                        AI Infra Engineer, Inference Optimization · Character.AI
+                        Machine Learning System Researcher/Architect, Inference Optimization · Character.AI
                     </p>
                     <div className="about-links">
                         <a href="mailto:yuanfan0504@gmail.com" className="about-link-item">
@@ -43,7 +43,7 @@ function About() {
                     <h2 className="about-section-title">ABOUT</h2>
                     <div className="about-bio">
                         <p>
-                            He is an AI Infra Engineer at{" "}
+                            He is a Machine Learning System Researcher/Architect at{" "}
                             <a href="https://character.ai/" target="_blank" rel="noreferrer" className="bio-link">
                                 Character.AI
                             </a>, working on inference optimization for production LLM serving.
@@ -55,9 +55,9 @@ function About() {
                                 Cornell University
                             </a>, respectively.
                             With research experience at both institutions and professional experience
-                            as an AI Infra Engineer at{" "}
+                            as a Research Engineer at{" "}
                             <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer" className="bio-link">
-                                Tencent
+                                Tencent Hunyuan
                             </a>, he has built strong expertise in Machine Learning Systems.
                         </p>
                         <p>
