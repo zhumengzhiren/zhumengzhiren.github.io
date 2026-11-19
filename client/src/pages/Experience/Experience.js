@@ -41,9 +41,10 @@ function Experience() {
                                         long-context chat. APC-aware KV-cache lookup in LMCache (16–25% lower p50 TTFT),
                                         a sliding-window-aware hybrid KV manager (2× per-GPU SLO capacity),
                                         ROCm-profiler-driven attention and hand-scheduled assembly FP8 GEMM kernels on AMD GPUs
-                                        (1.45× faster than AITER; 0.97→0.78 pJ/FLOP), and the three-stage gate every serving
-                                        optimization cleared before rollout: session-aware multi-turn replay at real arrival times,
-                                        quality parity against production on 2,000 served requests, and online A/B tests at equal load.
+                                        (1.45× faster than AITER; 0.97→0.78 pJ/FLOP), and the end-to-end, closed-loop validation gate
+                                        every serving optimization cleared before rollout: session-aware multi-turn replay at real arrival times
+                                        (TTFT/TBT/E2E within 5% of production), quality parity against production on 2,000 served requests,
+                                        and online A/B tests at equal load.
                                         Together the kernels and the KV manager raised per-GPU capacity 6×, cutting the fleet from 206 to 32 GPUs (~$4.6M/yr saved).
                                     </p>
                                     <div className="timeline-tags">
