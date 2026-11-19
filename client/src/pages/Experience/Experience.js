@@ -44,7 +44,7 @@ function Experience() {
                                         (1.45× faster than AITER; 0.97→0.78 pJ/FLOP), and a production traffic replay tool that
                                         replays requests in real arrival time with session-aware multi-turn replay, matches production metrics
                                         within the pod's own variance, and underpins every later optimization.
-                                        Together the kernels and the KV manager raised per-GPU capacity 6×, saving 155 GPUs (~$4M/yr).
+                                        Together the kernels and the KV manager raised per-GPU capacity 6×, cutting the fleet from 200 to 32 GPUs (~$4.4M/yr saved).
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
