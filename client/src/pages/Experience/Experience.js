@@ -40,10 +40,11 @@ function Experience() {
                                         Production LLM serving across multiple inference stacks for large-scale multi-turn,
                                         long-context chat. APC-aware KV-cache lookup in LMCache (16–25% lower p50 TTFT),
                                         a sliding-window-aware hybrid KV manager (2× per-GPU SLO capacity),
-                                        profiler-driven attention-kernel tuning on AMD GPUs (4.3× faster prefill kernel,
-                                        42–48% lower P99 TTFT at equal load), and a production traffic replay tool that
+                                        ROCm-profiler-driven attention and hand-scheduled assembly FP8 GEMM kernels on AMD GPUs
+                                        (1.45× faster than AITER; 0.97→0.78 pJ/FLOP), and a production traffic replay tool that
                                         replays requests in real arrival time with session-aware multi-turn replay, matches production metrics
                                         within the pod's own variance, and underpins every later optimization.
+                                        Together the kernels and the KV manager raised per-GPU capacity 6×, saving 155 GPUs (~$4M/yr).
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
