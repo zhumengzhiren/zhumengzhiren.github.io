@@ -46,7 +46,7 @@ function About() {
                             He is a Machine Learning System Researcher/Architect at{" "}
                             <a href="https://character.ai/" target="_blank" rel="noreferrer" className="bio-link">
                                 Character.AI
-                            </a>, working on inference, training, and multimodal infrastructure for production LLMs.
+                            </a>, working on inference, training, and reinforcement learning infrastructure for production LLMs.
                             He completed his undergraduate and master's studies in Computer Science at the{" "}
                             <a href="https://www.utoronto.ca/" target="_blank" rel="noreferrer" className="bio-link">
                                 University of Toronto
