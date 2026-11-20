@@ -195,6 +195,9 @@ function Experience() {
                                             Cornell Tech, Cornell University
                                         </a>
                                     </span>
+                                    <p className="timeline-description">
+                                        GPA: 3.9. Awarded a US$25,000 merit-based scholarship from Cornell Tech.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -215,6 +218,9 @@ function Experience() {
                                             University of Toronto
                                         </a>
                                     </span>
+                                    <p className="timeline-description">
+                                        GPA: 3.9, top 2% (96.75/100 average). Graduated with High Distinction; Dean’s List Scholar; recipient of the Konrad Group Digital Innovation Scholarship.
+                                    </p>
                                 </div>
                             </div>
                         </div>
