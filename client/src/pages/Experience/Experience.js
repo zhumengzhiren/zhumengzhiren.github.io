@@ -219,7 +219,7 @@ function Experience() {
                                         </a>
                                     </span>
                                     <p className="timeline-description">
-                                        GPA: 3.9, top 2% (96.75/100 average). Graduated with High Distinction; Dean’s List Scholar; recipient of the Konrad Group Digital Innovation Scholarship.
+                                        Average: 96.75/100, top 2%. Graduated with High Distinction; Dean’s List Scholar; recipient of the Konrad Group Digital Innovation Scholarship.
                                     </p>
                                 </div>
                             </div>
