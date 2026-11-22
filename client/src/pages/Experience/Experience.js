@@ -121,14 +121,14 @@ function Experience() {
                                         Rollout routing replay for MoE in verl’s FSDP engine (train–inference KL −64%, no
                                         slowdown), making rollout-log-prob bypass usable and cutting step time
                                         from 7.55 s to 6.80 s.
-                                        Request-level admission control with stepwise latency profiling and SLA-aware
-                                        priority scheduling, holding 100% goodput under 2–10× QPS bursts.
+                                        One-step off-policy asynchronous GRPO on a single 8×H100 node: 2× faster steps at the
+                                        same GPU count, about one-third lower KL drift, and no accuracy loss.
                                         CUDA attention-kernel optimization for GQA and DeepSeek FlashMLA, profiled with
                                         Nsight Compute, for about 20% and 15% throughput gains.
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Inference</span>
-                                        <span className="timeline-tag">Admission Control</span>
+                                        <span className="timeline-tag">Reinforcement Learning</span>
                                         <span className="timeline-tag">Kernel Optimization</span>
                                     </div>
                                 </div>
