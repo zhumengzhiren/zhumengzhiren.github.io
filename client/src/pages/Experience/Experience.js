@@ -124,8 +124,7 @@ function Experience() {
                                         One-step off-policy asynchronous GRPO with importance sampling on a single 8×H100 node:
                                         2× faster steps at the same GPU count, about one-third lower KL drift, and no accuracy loss.
                                         Bitwise-identical training and inference log-probs: verl’s training forward switched entirely to
-                                        vLLM’s kernels, plus a fix for a vLLM attention bug; over 20 training steps, train–inference KL
-                                        was exactly 0, with steps only 5% slower.
+                                        vLLM’s kernels, so train–inference KL was exactly 0, with steps only 5% slower.
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Inference</span>
