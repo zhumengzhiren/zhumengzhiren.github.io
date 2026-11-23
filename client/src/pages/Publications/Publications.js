@@ -49,7 +49,11 @@ function Publications() {
 
     const service = [
         {
-            role: "Invited Reviewer",
+            role: "Reviewer",
+            venue: "IEEE Transactions on Parallel and Distributed Systems (TPDS)",
+        },
+        {
+            role: "Reviewer",
             venue: "IEEE Journal on Selected Areas in Information Theory (JSAIT)",
             detail: "Special Issue on Energy and Data Efficiency in AI",
             year: "2026",
@@ -205,7 +209,9 @@ function Publications() {
                             <div key={i} className="service-entry fade-in">
                                 <span className="service-role">{s.role}</span>
                                 <span className="service-venue">{s.venue}</span>
-                                <span className="service-detail">{s.detail}, {s.year}</span>
+                                {(s.detail || s.year) && (
+                                    <span className="service-detail">{[s.detail, s.year].filter(Boolean).join(", ")}</span>
+                                )}
                             </div>
                         ))}
                     </div>
