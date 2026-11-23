@@ -37,7 +37,7 @@ function Experience() {
                                         </a>
                                     </span>
                                     <p className="timeline-description">
-                                        Production LLM serving across multiple inference stacks for large-scale multi-turn,
+                                        Production LLM serving built on vLLM for large-scale multi-turn,
                                         long-context chat. APC-aware KV-cache lookup in LMCache (16–25% lower p50 TTFT),
                                         a sliding-window-aware hybrid KV manager (2× per-GPU SLO capacity),
                                         ROCm-profiler-driven attention and hand-scheduled assembly FP8 GEMM kernels on AMD GPUs
