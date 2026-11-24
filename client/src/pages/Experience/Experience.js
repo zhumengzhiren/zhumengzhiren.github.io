@@ -123,8 +123,11 @@ function Experience() {
                                         Rollout routing replay for MoE in verl’s FSDP engine (train–inference KL −64%, no
                                         slowdown), making rollout-log-prob bypass usable and cutting step time
                                         from 7.55 s to 6.80 s.
-                                        One-step off-policy asynchronous GRPO with importance sampling on a single 8×H100 node:
-                                        2× faster steps at the same GPU count, about one-third lower KL drift, and no accuracy loss.
+                                        Cross-node weight sync in asynchronous reinforcement learning training of Gemma-4 31B
+                                        (verl + vLLM, 16×H100) cut from 5.5 s to 0.66 s per step: only about 1% of the served BF16
+                                        weights change per step, so the trainer sends just the changed values (1.9 GB instead of
+                                        64 GB) and a custom vLLM-side update patches the live weights in place, bit-exact, making
+                                        2-node async training 1.6× faster than single-node.
                                         Bitwise-identical training and inference log-probs: verl’s training forward switched entirely to
                                         vLLM’s kernels, so train–inference KL was exactly 0, with steps only 5% slower.
                                     </p>
