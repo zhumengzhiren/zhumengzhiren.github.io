@@ -48,7 +48,7 @@ function Experience() {
                                         Together the kernels and the KV manager raised per-GPU capacity 6×, cutting the fleet from 206 to 32 GPUs (~$4.6M/yr saved).
                                         Reinforcement learning rollouts for large MoE models on prefill–decode disaggregation
                                         (22–35% higher throughput), with wide expert-parallel (WideEP) decode across 64+ GPUs and
-                                        speculative decoding (2–3 draft tokens vs. 1: 15–19% higher throughput).
+                                        speculative decoding (1.9–2.5 tokens per step: 70–100% higher throughput).
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
@@ -115,7 +115,7 @@ function Experience() {
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer">
-                                            Tencent Hunyuan: Reinforcement Learning Infra
+                                            Tencent: Reinforcement Learning Infra
                                         </a>
                                     </span>
                                     <p className="timeline-description">

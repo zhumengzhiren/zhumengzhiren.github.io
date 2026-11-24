@@ -57,7 +57,7 @@ function About() {
                             With research experience at both institutions and professional experience
                             as a Research Engineer at{" "}
                             <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer" className="bio-link">
-                                Tencent Hunyuan
+                                Tencent
                             </a>, he has built strong expertise in Machine Learning Systems.
                         </p>
                         <p>
