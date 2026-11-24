@@ -122,7 +122,7 @@ function Experience() {
                                         Rollout routing replay for MoE in verl’s FSDP engine (train–inference KL −64%, no
                                         slowdown), making rollout-log-prob bypass usable and cutting step time
                                         from 7.55 s to 6.80 s.
-                                        Cross-node weight sync in asynchronous reinforcement learning training of Gemma-4 31B
+                                        Cross-node weight sync in asynchronous reinforcement learning training
                                         (verl + vLLM, 16×H100) cut from 5.5 s to 0.66 s per step: only about 1% of the served BF16
                                         weights change per step, so the trainer sends just the changed values (1.9 GB instead of
                                         64 GB) and a custom vLLM-side update patches the live weights in place, bit-exact, making
