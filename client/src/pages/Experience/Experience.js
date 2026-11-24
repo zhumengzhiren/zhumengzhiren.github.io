@@ -48,7 +48,7 @@ function Experience() {
                                         Together the kernels and the KV manager raised per-GPU capacity 6×, cutting the fleet from 206 to 32 GPUs (~$4.6M/yr saved).
                                         Reinforcement learning rollouts for large MoE models on prefill–decode disaggregation
                                         (22–35% higher throughput), with wide expert-parallel (WideEP) decode across 64+ GPUs and
-                                        speculative decoding (14–19% higher throughput).
+                                        speculative decoding (2–3 draft tokens vs. 1: 15–19% higher throughput).
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
