@@ -46,8 +46,9 @@ function Experience() {
                                         (TTFT/TBT/E2E within 5% of production), quality parity against production on 2,000 served requests,
                                         and online A/B tests at equal load.
                                         Together the kernels and the KV manager raised per-GPU capacity 6×, cutting the fleet from 206 to 32 GPUs (~$4.6M/yr saved).
-                                        Reinforcement learning rollouts for large MoE models on prefill–decode disaggregation, with wide
-                                        expert-parallel (WideEP) decode across 64+ GPUs and multi-token prediction (MTP).
+                                        Reinforcement learning rollouts for large MoE models on prefill–decode disaggregation
+                                        (22–35% higher throughput), with wide expert-parallel (WideEP) decode across 64+ GPUs and
+                                        multi-token prediction (MTP; 14–24% higher throughput).
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
