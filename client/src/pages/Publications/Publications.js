@@ -92,6 +92,7 @@ function Publications() {
             items: [
                 {text: "Same-GPU weight sharing across data-parallel replicas.", label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
                 {text: "A residency planner for multi-stage speech serving.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
+                {text: "Made same-GPU data parallelism under MPS the default, now in production at multiple inference providers: sgl-omni serve detects the GPU and runs measured replica counts, at 1.5–3.7× the previous default’s goodput on eight of 10 speech pipelines on a B200 (0.5 s p99 target). Measured H100 profiles reach 1.2–5.2× on seven pipelines (upstreaming in progress); collaborators have extended the same table to the RTX 4090 D and are adding the H200.", label: "PR #4302", url: "https://github.com/sgl-project/sglang-omni/pull/4302"},
             ],
         },
     ];
