@@ -29,7 +29,7 @@ function Publications() {
             ],
             venue: "SoCC (17th ACM Symposium on Cloud Computing)",
             year: "2026",
-            arxiv: "https://arxiv.org/abs/2504.05536",
+            program: "https://acmsocc.org/2026/socc26-program-papers.html#paper-471",
             abstract: "Data processing units (DPUs, SoC-based SmartNICs) are emerging data center hardware that provide opportunities to address cloud data processing challenges. We developed a DPU benchmarking framework that encompasses a suite of data processing tasks from primitive compute, memory, and I/O operations and hardware-accelerated tasks to macro-level cloud database modules and a full-fledged, lightweight DBMS."
         },
         {
@@ -140,6 +140,11 @@ function Publications() {
                                     <span className="pub-venue-name">{pub.venue}</span>, {pub.year}
                                 </div>
                                 <div className="pub-links">
+                                    {pub.program && (
+                                        <a href={pub.program} target="_blank" rel="noreferrer" className="pub-link-btn">
+                                            {pub.venue.split(" ")[0]} Program
+                                        </a>
+                                    )}
                                     {pub.arxiv && (
                                         <a href={pub.arxiv} target="_blank" rel="noreferrer" className="pub-link-btn">
                                             arXiv

@@ -165,7 +165,7 @@ function Experience() {
                                             Far Data Lab
                                         </a>
                                         . Co-designed{" "}
-                                        <a href="https://arxiv.org/abs/2504.05536" target="_blank" rel="noreferrer" className="highlight-link">
+                                        <a href="https://acmsocc.org/2026/socc26-program-papers.html#paper-471" target="_blank" rel="noreferrer" className="highlight-link">
                                             dpBento
                                         </a>
                                         {" "}to benchmark heterogeneous DPUs for data processing offload (SoCC 2026).
