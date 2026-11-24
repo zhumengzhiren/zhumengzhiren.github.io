@@ -91,7 +91,7 @@ function Publications() {
             repoUrl: "https://github.com/sgl-project/sglang-omni",
             items: [
                 {text: "Same-GPU weight sharing across data-parallel replicas.", label: "PR #1124", url: "https://github.com/sgl-project/sglang-omni/pull/1124"},
-                {text: "A placement planner for multi-stage speech serving.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
+                {text: "A residency planner for multi-stage speech serving.", label: "PR #2134", url: "https://github.com/sgl-project/sglang-omni/pull/2134"},
             ],
         },
     ];
