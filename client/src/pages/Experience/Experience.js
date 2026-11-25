@@ -163,7 +163,7 @@ function Experience() {
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
                                         <h3 className="timeline-role">Undergraduate Student Researcher – Far Data Lab</h3>
-                                        <span className="timeline-period">Jan 2024 – Feb 2025</span>
+                                        <span className="timeline-period">Jan 2024 – May 2025</span>
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://www.utoronto.ca/" target="_blank" rel="noreferrer">
