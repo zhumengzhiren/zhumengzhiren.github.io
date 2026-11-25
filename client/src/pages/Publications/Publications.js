@@ -90,7 +90,7 @@ function Publications() {
             repo: "SGLang",
             repoUrl: "https://github.com/sgl-project/sglang",
             items: [
-                {text: "UniBoost, the tail-aware schedule policy from the ICML 2026 paper above.", label: "PR #35637", url: "https://github.com/sgl-project/sglang/pull/35637"},
+                {text: "UniBoost, the tail-aware policy from the ICML 2026 paper above, merged into the SGLang scheduler.", label: "PR #35637", url: "https://github.com/sgl-project/sglang/pull/35637"},
             ],
         },
         {

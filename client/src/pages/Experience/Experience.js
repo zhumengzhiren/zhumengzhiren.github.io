@@ -100,7 +100,7 @@ function Experience() {
                                         table to the RTX 4090 D and are adding the H200.
                                         Designed a prediction-free, tail-aware scheduler (γ-Boost) with
                                         KV-cache-aware preemption that cut tail TTFT/TTLT by 37–60% on Azure production traces
-                                        (ICML 2026), now merged into SGLang as its UniBoost schedule policy (
+                                        (ICML 2026), now merged into the SGLang scheduler as UniBoost (
                                         <a href="https://github.com/sgl-project/sglang/pull/35637" target="_blank" rel="noreferrer" className="highlight-link">
                                             #35637
                                         </a>
