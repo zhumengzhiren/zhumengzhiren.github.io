@@ -53,15 +53,15 @@ function About() {
                             </a>{" "}and{" "}
                             <a href="https://tech.cornell.edu/" target="_blank" rel="noreferrer" className="bio-link">
                                 Cornell University
-                            </a>, respectively.
-                            With research experience at both institutions and professional experience
-                            as a Research Engineer at{" "}
+                            </a>, respectively, with research at both: DPU benchmarking for cloud data processing
+                            at Toronto's Far Data Lab (SoCC 2026) and LLM serving at Cornell Tech's S4AI Lab (ICML 2026).
+                            He previously worked as a Research Engineer at{" "}
                             <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer" className="bio-link">
                                 Tencent
-                            </a>, he has built strong expertise in Machine Learning Systems.
+                            </a>{" "}on reinforcement learning infrastructure.
                         </p>
                         <p>
-                            His research specifically targets system-level bottlenecks in large-scale model inference:
+                            His research targets system-level bottlenecks in large-scale model inference:
                             KV-cache offloading, distributed scheduling, and hardware-aware kernel optimization.
                         </p>
                     </div>
