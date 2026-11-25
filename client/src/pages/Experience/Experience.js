@@ -88,6 +88,16 @@ function Experience() {
                                         from two probes per pipeline, it sets how many engines share each GPU, their tensor-parallel
                                         degree and the GPU split across stages, using 33% of a full sweep’s GPU time; 1.5–2.5× the
                                         goodput of shipped configurations on six TTS pipelines on one H100.
+                                        Made same-GPU data parallelism under MPS the default in SGLang-Omni (
+                                        <a href="https://github.com/sgl-project/sglang-omni/pull/4302" target="_blank" rel="noreferrer" className="highlight-link">
+                                            #4302
+                                        </a>
+                                        ), now in production at multiple inference providers:{" "}
+                                        <span style={{fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace", fontSize: "0.92em"}}>sgl-omni serve</span>{" "}
+                                        detects the GPU and runs measured replica counts, at 1.5–3.7× the previous default’s goodput
+                                        on eight of 10 speech pipelines on a B200 (0.5 s p99 target). Measured H100 profiles reach
+                                        1.2–5.2× on seven pipelines (upstreaming in progress); collaborators have extended the same
+                                        table to the RTX 4090 D and are adding the H200.
                                         Designed a prediction-free, tail-aware scheduler (γ-Boost) with
                                         KV-cache-aware preemption that cut tail TTFT/TTLT by 37–60% on Azure production traces
                                         (ICML 2026), now merged into SGLang as its UniBoost schedule policy (
