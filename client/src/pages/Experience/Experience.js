@@ -90,7 +90,11 @@ function Experience() {
                                         goodput of shipped configurations on six TTS pipelines on one H100.
                                         Designed a prediction-free, tail-aware scheduler (γ-Boost) with
                                         KV-cache-aware preemption that cut tail TTFT/TTLT by 37–60% on Azure production traces
-                                        (ICML 2026). Developed PTA (Prefill → Think → Answer) disaggregated
+                                        (ICML 2026), now merged into SGLang as its UniBoost schedule policy (
+                                        <a href="https://github.com/sgl-project/sglang/pull/35637" target="_blank" rel="noreferrer" className="highlight-link">
+                                            #35637
+                                        </a>
+                                        ). Developed PTA (Prefill → Think → Answer) disaggregated
                                         serving with per-stage DVFS, KV-cache, and GPU allocation under power caps, cutting
                                         P90 time-between-answer-tokens by 49–71% versus prefill–decode disaggregation.
                                     </p>
