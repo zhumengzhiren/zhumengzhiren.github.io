@@ -14,8 +14,12 @@ const resumeFile = "/resume_en.pdf";
 
 function Resume() {
     const [width, setWidth] = useState(1200);
+    // The PDF viewer mounts only after the first render, and never while react-snap
+    // prerenders, so the prerendered markup equals the first client render.
+    const [showPdf, setShowPdf] = useState(false);
 
     useEffect(() => {
+        if (navigator.userAgent !== "ReactSnap") setShowPdf(true);
         function handleResize() {
             setWidth(window.innerWidth);
         }
@@ -46,6 +50,7 @@ function Resume() {
                 </Row>
 
                 <Row className="resume">
+                    {showPdf && (
                     <Document
                         file={process.env.PUBLIC_URL + resumeFile}
                         className="d-flex justify-content-center"
@@ -53,6 +58,7 @@ function Resume() {
                     >
                         <Page pageNumber={1} scale={width > 786 ? 1.7 : Math.max(0.46, width / 720)} renderTextLayer={false}/>
                     </Document>
+                    )}
                 </Row>
             </Container>
         </div>

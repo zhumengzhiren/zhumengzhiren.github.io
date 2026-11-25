@@ -11,7 +11,7 @@ function About() {
         <section>
             <Seo
                 title="About | Yuanfan Chen"
-                description="About Yuanfan Chen, an ML systems researcher and infrastructure engineer at Character.AI working on inference optimization for production LLM serving."
+                description="About Yuanfan Chen, an ML systems researcher and infrastructure engineer at Character.AI working on inference, training, and reinforcement learning infrastructure for production LLMs."
                 path="/about"
             />
             <Container className="about-page">

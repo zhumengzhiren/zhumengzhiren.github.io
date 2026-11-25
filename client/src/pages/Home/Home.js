@@ -3,12 +3,15 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
 import Seo from "../../Seo";
 
-const description = "Yuanfan Chen is an ML systems researcher and infrastructure engineer at Character.AI working on inference optimization for production LLM serving: KV-cache offloading, scheduling, and hardware-aware kernel optimization.";
+const description = "Yuanfan Chen is an ML systems researcher and infrastructure engineer at Character.AI working on inference, training, and reinforcement learning infrastructure for production LLMs: KV-cache offloading, scheduling, and hardware-aware kernel optimization.";
 
 const Home = () => {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
+        // Not while react-snap prerenders: the snapshot must equal the first client
+        // render (no canvas yet), otherwise hydration fails and React re-renders the page.
+        if (navigator.userAgent === "ReactSnap") return;
         initParticlesEngine(async (engine) => {
             await loadAll(engine);
         }).then(() => {

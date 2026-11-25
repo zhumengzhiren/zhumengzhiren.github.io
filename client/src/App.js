@@ -12,8 +12,16 @@ import Preloader from "./pages/Pre/Preloader";
 import FadeIn from "./pages/Effect/FadeIn";
 
 
+// Pages prerendered by react-snap arrive with their content already inside #root.
+// The first client render has to produce the same markup for hydration to succeed,
+// so on those pages the preloader starts hidden (the snapshot does not contain it).
+const isPrerendered =
+    typeof document !== "undefined" &&
+    !!document.getElementById("root") &&
+    document.getElementById("root").hasChildNodes();
+
 function App() {
-  const [load, updateLoad] = useState(true);
+  const [load, updateLoad] = useState(!isPrerendered);
   window.addEventListener("scroll", FadeIn);
   window.addEventListener("resize", FadeIn);
 
