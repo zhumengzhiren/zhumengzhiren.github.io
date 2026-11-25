@@ -44,7 +44,7 @@ function Experience() {
                                         (1.45× faster than AITER; 0.97→0.78 pJ/FLOP), and the end-to-end, closed-loop validation gate
                                         every serving optimization cleared before rollout: session-aware multi-turn replay
                                         (TTFT/TBT/E2E within 5% of production), quality parity against production on 2,000 served requests,
-                                        and online A/B tests at equal load, with serving metrics monitored in Prometheus and Grafana.
+                                        and online A/B tests at equal load, with fine-grained serving metrics monitored in Prometheus and Grafana.
                                         Together the kernels and the KV manager raised per-GPU capacity 6.4× (0.4→2.55 QPS), cutting the fleet from 206 to 32 GPUs (~$4.6M/yr saved).
                                         Reinforcement learning rollouts for large MoE models on prefill–decode disaggregation
                                         (22–35% higher throughput than single-node), with wide expert-parallel (WideEP) decode across 64+ GPUs and
