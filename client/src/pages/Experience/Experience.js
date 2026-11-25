@@ -68,7 +68,7 @@ function Experience() {
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
                                         <h3 className="timeline-role">Machine Learning System Researcher – S4AI Lab</h3>
-                                        <span className="timeline-period">Sep 2025 – Present</span>
+                                        <span className="timeline-period">Aug 2025 – Present</span>
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://tech.cornell.edu/" target="_blank" rel="noreferrer">
@@ -126,7 +126,7 @@ function Experience() {
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
                                         <h3 className="timeline-role">Research Engineer</h3>
-                                        <span className="timeline-period">May 2025 – Jul 2025</span>
+                                        <span className="timeline-period">May 2025 – Aug 2025</span>
                                     </div>
                                     <span className="timeline-org">
                                         <a href="https://www.tencent.com/en-us/" target="_blank" rel="noreferrer">
