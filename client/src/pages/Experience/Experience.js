@@ -162,7 +162,7 @@ function Experience() {
                                 </div>
                                 <div className="timeline-content">
                                     <div className="timeline-top-row">
-                                        <h3 className="timeline-role">Undergraduate Student Researcher – Far Data Lab</h3>
+                                        <h3 className="timeline-role">Researcher – Far Data Lab</h3>
                                         <span className="timeline-period">Jan 2024 – May 2025</span>
                                     </div>
                                     <span className="timeline-org">
