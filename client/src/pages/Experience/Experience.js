@@ -45,7 +45,7 @@ function Experience() {
                                         every serving optimization cleared before rollout: session-aware multi-turn replay at real arrival times
                                         (TTFT/TBT/E2E within 5% of production), quality parity against production on 2,000 served requests,
                                         and online A/B tests at equal load.
-                                        Together the kernels and the KV manager raised per-GPU capacity 6×, cutting the fleet from 206 to 32 GPUs (~$4.6M/yr saved).
+                                        Together the kernels and the KV manager raised per-GPU capacity 6.4× (0.4→2.55 QPS), cutting the fleet from 206 to 32 GPUs (~$4.6M/yr saved).
                                         Reinforcement learning rollouts for large MoE models on prefill–decode disaggregation
                                         (22–35% higher throughput), with wide expert-parallel (WideEP) decode across 64+ GPUs and
                                         speculative decoding (1.9–2.6 tokens per step: 53–82% higher throughput).
@@ -95,18 +95,18 @@ function Experience() {
                                         ), now in production at multiple inference providers:{" "}
                                         <span style={{fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace", fontSize: "0.92em"}}>sgl-omni serve</span>{" "}
                                         detects the GPU and runs measured replica counts, at 1.5–3.7× the previous default’s goodput
-                                        on eight of 10 speech pipelines on a B200 (0.5 s p99 target). Measured H100 profiles reach
-                                        1.2–5.2× on seven pipelines (upstreaming in progress); collaborators have extended the same
-                                        table to the RTX 4090 D and are adding the H200.
+                                        on eight of 10 speech pipelines on a B200 (0.5 s p99 target). Measured H100 profiles cover
+                                        seven pipelines (upstreaming in progress).
                                         Designed a prediction-free, tail-aware scheduler (γ-Boost) with
-                                        KV-cache-aware preemption that cut tail TTFT/TTLT by 37–60% on Azure production traces
+                                        KV-cache-aware preemption that cut p99 TTLT by up to 35–50% versus SRPT with perfect length
+                                        knowledge and TTFT by 34–47% on Azure production traces
                                         (ICML 2026), now merged into the SGLang scheduler as UniBoost (
                                         <a href="https://github.com/sgl-project/sglang/pull/35637" target="_blank" rel="noreferrer" className="highlight-link">
                                             #35637
                                         </a>
                                         ). Developed PTA (Prefill → Think → Answer) disaggregated
                                         serving with per-stage DVFS, KV-cache, and GPU allocation under power caps, cutting
-                                        P90 time-between-answer-tokens by 49–71% versus prefill–decode disaggregation.
+                                        p90 time-between-answer-tokens by 49–71% versus prefill–decode disaggregation.
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">LLM Serving</span>
@@ -184,7 +184,9 @@ function Experience() {
                                             dpBento
                                         </a>
                                         {" "}to benchmark heterogeneous DPUs for data processing offload (SoCC 2026).
-                                        Studied RocksDB internals and explored DPU offload for compute-storage disaggregation.
+                                        Profiled RocksDB compaction and decompression paths end to end and offloaded compute-heavy
+                                        stages to the DPU, reducing host CPU utilization by ~40% and reaching ~3× decompression
+                                        throughput through hardware acceleration.
                                     </p>
                                     <div className="timeline-tags">
                                         <span className="timeline-tag">DPU</span>

@@ -62,28 +62,13 @@ function Publications() {
 
     const contributions = [
         {
-            repo: "vLLM",
-            repoUrl: "https://github.com/vllm-project/vllm",
-            items: [
-                {text: "Found and fixed a silent output-corruption bug in the AITER fp8 MoE path, where padded expert weights were left uninitialized.", label: "PR #55251", url: "https://github.com/vllm-project/vllm/pull/55251"},
-            ],
-        },
-        {
             repo: "LMCache",
             repoUrl: "https://github.com/LMCache/LMCache",
             items: [
                 {text: "Per-tier cache-hit metrics so operators can see where KV-cache lookups hit, miss, or exit early.", label: "PR #4734", url: "https://github.com/LMCache/LMCache/pull/4734"},
                 {text: "Prometheus counters that aggregate those hits, misses, and early exits per model.", label: "PR #4962", url: "https://github.com/LMCache/LMCache/pull/4962"},
-                {text: "Attribution of delivered keys to L1/L2 per object group on retrieve, exported as counters.", label: "PR #5842", url: "https://github.com/LMCache/LMCache/pull/5842"},
+                {text: "A per-object-group split of the L1/L2 hit-key counters, so key counts can be converted to bytes per tier.", label: "PR #5842", url: "https://github.com/LMCache/LMCache/pull/5842"},
                 {text: "Co-developed lookup skipping for prefixes vLLM already caches; on replayed production traffic it cut L2 prefetch loads by 56% and p50 TTFT by 16–25%.", label: "PR #5383", url: "https://github.com/LMCache/LMCache/pull/5383"},
-            ],
-        },
-        {
-            repo: "AITER (ROCm)",
-            repoUrl: "https://github.com/ROCm/aiter",
-            items: [
-                {text: "Proposed a prefill attention config for Gemma-4 head-512 layers on MI325X.", label: "PR #5649", url: "https://github.com/ROCm/aiter/pull/5649"},
-                {text: "Validated the maintainers' follow-up end to end in vLLM.", label: "PR #5650", url: "https://github.com/ROCm/aiter/pull/5650"},
             ],
         },
         {
@@ -124,7 +109,7 @@ function Publications() {
         <section>
             <Seo
                 title="Publications | Yuanfan Chen"
-                description="Publications by Yuanfan Chen on tail-aware LLM inference scheduling (ICML 2026) and DPU performance for cloud data processing (SoCC 2026), LLM serving under power caps (preprint), plus open-source contributions to vLLM, LMCache, AITER, SGLang, and SGLang-Omni."
+                description="Publications by Yuanfan Chen on tail-aware LLM inference scheduling (ICML 2026) and DPU performance for cloud data processing (SoCC 2026), LLM serving under power caps (preprint), plus open-source contributions to LMCache, SGLang, and SGLang-Omni."
                 path="/publications"
             />
             <Container fluid className="pub-page">
