@@ -87,6 +87,13 @@ function Publications() {
             ],
         },
         {
+            repo: "SGLang",
+            repoUrl: "https://github.com/sgl-project/sglang",
+            items: [
+                {text: "UniBoost, the tail-aware schedule policy from the ICML 2026 paper above.", label: "PR #35637", url: "https://github.com/sgl-project/sglang/pull/35637"},
+            ],
+        },
+        {
             repo: "SGLang-Omni",
             repoUrl: "https://github.com/sgl-project/sglang-omni",
             items: [
@@ -117,7 +124,7 @@ function Publications() {
         <section>
             <Seo
                 title="Publications | Yuanfan Chen"
-                description="Publications by Yuanfan Chen on tail-aware LLM inference scheduling (ICML 2026) and DPU performance for cloud data processing (SoCC 2026), LLM serving under power caps (preprint), plus open-source contributions to vLLM, LMCache, AITER, and SGLang-Omni."
+                description="Publications by Yuanfan Chen on tail-aware LLM inference scheduling (ICML 2026) and DPU performance for cloud data processing (SoCC 2026), LLM serving under power caps (preprint), plus open-source contributions to vLLM, LMCache, AITER, SGLang, and SGLang-Omni."
                 path="/publications"
             />
             <Container fluid className="pub-page">
